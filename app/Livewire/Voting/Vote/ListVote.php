@@ -20,7 +20,7 @@ class ListVote extends Component
     public $filterUf = '';
 
     // Exemplo de array para armazenar os "votos" selecionados via radio
-    public $votos = [];
+    public $voto = [];
 
     /**
      * Monta o componente, recebendo a Voting que está sendo visualizada.
@@ -31,11 +31,11 @@ class ListVote extends Component
 
         // Opcionalmente, podemos popular $votos[] com o status inicial (ex: do banco)
         // para cada registro, se existir:
-        $existingVotes = Vote::where('voting_id', $voting->id)->get();
-        foreach ($existingVotes as $vote) {
-            // Se houver algum campo "position" (A FAVOR, Indefinido, Contra) em Vote...
-            // Exemplo:
-            $this->votos[$vote->id] = $vote->vote;
+        $votes = Vote::with('senator')
+            ->where('voting_id', $voting->id)->get();
+
+        foreach ($votes as $vote) {
+            $this->voto[$vote->id] = $vote->vote;
         }
     }
 
@@ -62,8 +62,8 @@ class ListVote extends Component
     {
         // Exemplo:
         // Se a propriedade atualizada for algo como "votos.123"
-        if (strpos($property, 'votos.') === 0) {
-            $voteId = str_replace('votos.', '', $property);
+        if (strpos($property, 'voto.') === 0) {
+            $voteId = str_replace('voto.', '', $property);
 
             // Aqui você pode salvar no banco de dados a nova posição marcada:
             // Por exemplo:
@@ -88,16 +88,16 @@ class ListVote extends Component
                 $q->where('name', 'like', '%' . $this->filterName . '%');
             });
         }
-        if ($this->filterParty) {
-            $query->whereHas('senator', function ($q) {
-                $q->where('party', 'like', '%' . $this->filterParty . '%');
-            });
-        }
-        if ($this->filterUf) {
-            $query->whereHas('senator', function ($q) {
-                $q->where('uf', 'like', '%' . $this->filterUf . '%');
-            });
-        }
+        //if ($this->filterParty) {
+        //    $query->whereHas('senator', function ($q) {
+        //        $q->where('party', 'like', '%' . $this->filterParty . '%');
+        //    });
+        //}
+        //if ($this->filterUf) {
+        //    $query->whereHas('senator', function ($q) {
+        //        $q->where('uf', 'like', '%' . $this->filterUf . '%');
+        //    });
+        //}
 
         // Paginação ou get() simples
         $votes = $query->get();

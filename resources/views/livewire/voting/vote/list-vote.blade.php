@@ -67,16 +67,16 @@
                             <td class="px-4 py-1 whitespace-nowrap justify-center">
                                 <div class="flex items-center space-x-4">
                                     <label class="inline-flex items-center">
-                                        <input type="radio"  wire:model.live="votos.{{ $vote->id }}" value="Y" class="form-radio text-indigo-600">
+                                        <input type="radio"  wire:model.live="voto.{{ $vote->id }}" value="Y" class="form-radio text-indigo-600">
                                         <span class="ml-2">{{ __('A Favor') }}</span>
                                     </label>
 
                                     <label class="inline-flex items-center">
-                                        <input type="radio" wire:model.live="votos.{{ $vote->id }}" value="I" class="form-radio text-indigo-600">
+                                        <input type="radio" wire:model.live="voto.{{ $vote->id }}" value="I" class="form-radio text-indigo-600">
                                         <span class="ml-2">{{ __('Indefinido') }}</span>
                                     </label>
                                     <label class="inline-flex items-center">
-                                        <input type="radio" wire:model.live="votos.{{ $vote->id }}" value="N" class="form-radio text-indigo-600">
+                                        <input type="radio" wire:model.live="voto.{{ $vote->id }}" value="N" class="form-radio text-indigo-600">
                                         <span class="ml-2">{{ ('Contra') }}</span>
                                     </label>
                                 </div>
