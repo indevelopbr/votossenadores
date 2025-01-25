@@ -97,6 +97,11 @@
                                                 </div>
                                                 <div class="sigla">{{ $vote->senator->party->name . ' - ' . $vote->senator->uf }}</div>
                                                 <div class="social-midia">
+                                                    @if ($vote->senator->email)
+                                                        <a href="{{ $vote->senator->email }}" style="text-decoration: none;">
+                                                            <i class="bi bi-envelope"></i>
+                                                        </a>
+                                                    @endif
                                                     @if ($vote->senator->facebook)
                                                         <a href="{{ $vote->senator->facebook }}" style="text-decoration: none;">
                                                             <i class="bi bi-facebook"></i>
@@ -144,6 +149,11 @@
                                                 </div>
                                                 <div class="sigla">{{ $vote->senator->party->name . ' - ' . $vote->senator->uf }}</div>
                                                 <div class="social-midia">
+                                                    @if ($vote->senator->email)
+                                                        <a href="{{ $vote->senator->email }}" style="text-decoration: none;">
+                                                            <i class="bi bi-envelope"></i>
+                                                        </a>
+                                                    @endif
                                                     @if ($vote->senator->facebook)
                                                         <a href="{{ $vote->senator->facebook }}" style="text-decoration: none;">
                                                             <i class="bi bi-facebook"></i>
@@ -193,6 +203,11 @@
                                                 </div>
                                                 <div class="sigla">{{ $vote->senator->party->name . ' - ' . $vote->senator->uf }}</div>
                                                 <div class="social-midia">
+                                                    @if ($vote->senator->email)
+                                                        <a href="{{ $vote->senator->email }}" style="text-decoration: none;">
+                                                            <i class="bi bi-envelope"></i>
+                                                        </a>
+                                                    @endif
                                                     @if ($vote->senator->facebook)
                                                         <a href="{{ $vote->senator->facebook }}" style="text-decoration: none;">
                                                             <i class="bi bi-facebook"></i>
