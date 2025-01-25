@@ -596,13 +596,13 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
             <a href="#afavor" style="text-decoration: none;">
                 <div class="card votos-a-favor">
                     <div class="titulo">A FAVOR</div>
-                <span class="numero" data-duration="2000" data-to-value="36" data-from-value="0" data-delimiter=",">36</span>
+                <span class="numero" data-duration="2000" data-to-value="36" data-from-value="0" data-delimiter=",">35</span>
             </div>
                 </a>
             <a href="#indefinidos" style="text-decoration: none;">
                 <div class="card votos-abstencoes">
                 <div class="titulo">INDEFINIDOS</div>
-                <span class="numero" data-duration="2000" data-to-value="27" data-from-value="0" data-delimiter=",">27</span>
+                <span class="numero" data-duration="2000" data-to-value="27" data-from-value="0" data-delimiter=",">28</span>
             </div>
             </a>
             <a href="#contra" style="text-decoration: none;">
