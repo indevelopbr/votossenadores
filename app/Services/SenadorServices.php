@@ -149,6 +149,7 @@ class SenadorServices
                 $newSenador->update([
                     'name'                  => $senador['NomeParlamentar'],
                     'email'                 => $senador['EmailParlamentar'],
+                    //'birth_date'            => $item['DadosBasicosParlamentar']['DataNascimento'],
                     'phone'                 => '+5561' . $senador['Telefones']['Telefone'][0]['NumeroTelefone'],
                     'uf'                    => $senador['UfParlamentar'],
                     'image_profile'         => $imagePath ?? '',
@@ -284,7 +285,7 @@ class SenadorServices
 
     public function initUpdate()
     {
-        $this->updatePartidos();
+        //$this->updatePartidos();
         $this->updateSenadoresAtual();
 
         //foreach ($senadores as $senador) {
