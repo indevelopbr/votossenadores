@@ -36,13 +36,14 @@ class Home extends Component
             ->title('Votação não encontrada');
         }
 
-        // Filtra os votos com base na UF selecionada
-        $filteredVotes = $voting->votes->filter(function ($vote) {
-            // Certifique-se de que a relação está carregada corretamente
-            return isset($vote->senator) 
-                && $vote->senator->uf === $this->selectedUf;
-        });
-
+        if ($this->selectedUf) {
+            // Filtra os votos com base na UF selecionada
+            $filteredVotes = $voting->votes->filter(function ($vote) {
+                // Certifique-se de que a relação está carregada corretamente
+                return isset($vote->senator) 
+                    && $vote->senator->uf === $this->selectedUf;
+            });
+        }
         // Separa os votos por tipo
         $inFavor = $filteredVotes->where('vote', 'Y')->sortBy(fn($vote) => $vote->senator->name ?? '');
         $indefinite = $filteredVotes->where('vote', 'I')->sortBy(fn($vote) => $vote->senator->name ?? '');
