@@ -6,12 +6,11 @@
 	<title>{{ config('app.name') . $title }}</title>
     <meta name="robots" content="max-image-preview:large">
 
-    <link rel="stylesheet" id="hfe-style-css" href="https://web.archive.org/web/20240930204343cs_/https://votossenadores.com.br/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1.6.42" media="all">
-    <link rel="stylesheet" id="elementor-frontend-css" href="https://web.archive.org/web/20240930204343cs_/https://votossenadores.com.br/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.24.4" media="all">
-    <link rel="stylesheet" id="swiper-css" href="https://web.archive.org/web/20240930204343cs_/https://votossenadores.com.br/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5" media="all">
-    <link rel="stylesheet" id="e-swiper-css" href="https://web.archive.org/web/20240930204343cs_/https://votossenadores.com.br/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.24.4" media="all">
-    <link rel="stylesheet" id="elementor-post-14-css" href="" media="all">
-    <link rel="stylesheet" href="{{ asset('assets/css/frontend.min.css')}}" media="all">
+    <link rel="stylesheet" href="{{ asset('assets/css/header-footer-elementor.css?ver=1.6.42') }}" media="all">
+    <link rel="stylesheet" href="{{ asset('assets/css/frontend.min.css?ver=3.24.4') }}" media="all">
+    <link rel="stylesheet" href="{{ asset('assets/css/swiper.min.css?ver=8.4.5') }}" media="all">
+    <link rel="stylesheet" href="{{ asset('assets/css/e-swiper.min.css?ver=3.24.4') }}" media="all">
+    <link rel="stylesheet" href="{{ asset('assets/css/frontend.min.css') }}" media="all">
     <link rel="stylesheet" href="{{ asset('assets/css/uael-frontend.min.css?ver=1.36.34') }}" media="all">
     <link rel="stylesheet" href="{{ asset('assets/css/post-807.css?ver=1726244872') }}" media="all">
     <link rel="stylesheet" href="{{ asset('assets/css/style.min.css?ver=3.1.1') }}" media="all">
@@ -602,7 +601,7 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
             <a href="#indefinidos" style="text-decoration: none;">
                 <div class="card votos-abstencoes">
                 <div class="titulo">INDEFINIDOS</div>
-                <span class="numero" data-duration="2000" data-to-value="27" data-from-value="0" data-delimiter=",">28</span>
+                <span class="numero" data-duration="2000" data-to-value="27" data-from-value="0" data-delimiter=",">29</span>
             </div>
             </a>
             <a href="#contra" style="text-decoration: none;">
@@ -1711,6 +1710,33 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
         </a>
             </div>
 </div>
+
+                        <div class="parlamentar">
+    <div class="imagem">
+                        <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/406f8920108b99eccaba0f85ecfaa678.jpg" width="99" height="120" alt="Avatar de Eduardo Braga">
+            </div>    
+    <div class="titulo">Eliziane Gama</div>
+            <div class="titulo" style="margin: 0; font-weight: 700; font-size: 12px !important; text-transform: none !important;">Reeleição: 2026</div>
+        <div class="sigla">Partido Social Democrático - MA</div>
+    <div class="social-midia">
+                <a href="https://web.archive.org/web/20240930204343/https://www.facebook.com/EduardoBraga15" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-facebook"></i>
+        </a>
+                        <a href="https://web.archive.org/web/20240930204343/email:sen.eduardobraga@senado.leg.br" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-email"></i>
+        </a>
+        
+                <a href="https://web.archive.org/web/20240930204343/https://www.instagram.com/eduardobraga_am?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-instagram-1"></i>
+        </a>
+                        <a href="tel:6133036230" style="text-decoration: none;">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-square-alt" viewBox="0 0 448 512" xmlns="https://www.w3.org/2000/svg">
+                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
+            </svg>
+        </a>
+            </div>
+</div>
+
                         <div class="parlamentar">
     <div class="imagem">
                         <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/1cc28c5f5cfccfb2f76e6cbc4ba3e29b.jpg" width="99" height="120" alt="Avatar de Fernando Dueire">
