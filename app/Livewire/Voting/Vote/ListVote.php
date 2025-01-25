@@ -15,62 +15,31 @@ class ListVote extends Component
     public Voting $voting;
 
     // Filtros
-    public $filterName = '';
+    public $filterName  = '';
     public $filterParty = '';
-    public $filterUf = '';
+    public $filterUf    = '';
 
-    // Exemplo de array para armazenar os "votos" selecionados via radio
     public $voto = [];
 
-    /**
-     * Monta o componente, recebendo a Voting que está sendo visualizada.
-     */
-    public function mount(Voting $voting)
-    {
-        $this->voting = $voting;
-
-        // Opcionalmente, podemos popular $votos[] com o status inicial (ex: do banco)
-        // para cada registro, se existir:
-        $votes = Vote::with('senator')
-            ->where('voting_id', $voting->id)->get();
-
-        foreach ($votes as $vote) {
-            $this->voto[$vote->id] = $vote->vote;
-        }
-    }
+    // Sempre que o usuário digitar algo nos filtros, reseta a paginação
+    public function updatingFilterName()  { $this->resetPage(); }
+    public function updatingFilterParty() { $this->resetPage(); }
+    public function updatingFilterUf()    { $this->resetPage(); }
 
     /**
-     * Atualiza a páginação sempre que algum filtro mudar, para voltar à página 1.
-     */
-    public function updatingFilterName()
-    {
-        $this->resetPage();
-    }
-    public function updatingFilterParty()
-    {
-        $this->resetPage();
-    }
-    public function updatingFilterUf()
-    {
-        $this->resetPage();
-    }
-
-    /**
-     * Escuta mudanças de qualquer propriedade e salva, se desejar.
+     * Detecta mudanças em qualquer propriedade (inclusive no array $voto).
+     * Se for uma mudança no radio (ex: "voto.15"), salva o valor no banco.
      */
     public function updated($property, $value)
     {
-        // Exemplo:
-        // Se a propriedade atualizada for algo como "votos.123"
+        // Se a propriedade iniciada é algo como "voto.XXX"
         if (strpos($property, 'voto.') === 0) {
+            // Extrai o ID do Vote
             $voteId = str_replace('voto.', '', $property);
 
-            // Aqui você pode salvar no banco de dados a nova posição marcada:
-            // Por exemplo:
             $vote = Vote::find($voteId);
-
             if ($vote) {
-                $vote->vote = $value; // "A FAVOR", "Indefinido" ou "Contra"
+                $vote->vote = $value;  // Ex: "A FAVOR", "Contra" ou "Indefinido"
                 $vote->save();
             }
         }
@@ -78,32 +47,42 @@ class ListVote extends Component
 
     public function render()
     {
-        // Busca os votos, filtrando pelo voting_id
+        // Filtra os registros
         $query = Vote::with('senator')
             ->where('voting_id', $this->voting->id);
 
-        // Exemplo de filtros (ajuste se seus campos forem diferentes)
         if ($this->filterName) {
             $query->whereHas('senator', function ($q) {
-                $q->where('name', 'like', '%' . $this->filterName . '%');
+                $q->where('name', 'like', '%'.$this->filterName.'%')
+                  ->orWhere('uf', 'like', '%'.$this->filterName.'%');
             });
         }
-        //if ($this->filterParty) {
-        //    $query->whereHas('senator', function ($q) {
-        //        $q->where('party', 'like', '%' . $this->filterParty . '%');
-        //    });
-        //}
-        //if ($this->filterUf) {
-        //    $query->whereHas('senator', function ($q) {
-        //        $q->where('uf', 'like', '%' . $this->filterUf . '%');
-        //    });
-        //}
+        if ($this->filterParty) {
+            $query->whereHas('senator', function ($q) {
+                $q->where('party', 'like', '%'.$this->filterParty.'%');
+            });
+        }
+        if ($this->filterUf) {
+            $query->whereHas('senator', function ($q) {
+                $q->where('uf', 'like', '%'.$this->filterUf.'%');
+            });
+        }
 
-        // Paginação ou get() simples
+        // Ordena pelo nome do senador usando subselect, caso Laravel 8+
+        $query->orderBy(
+            Senator::select('name')
+                ->whereColumn('senators.id', 'votes.senator_id')
+                ->limit(1),
+            'asc'
+        );
+
+        foreach ($query->get() as $vote) {
+            $this->voto[$vote->id] = $vote->vote;
+        }
+
+        // Pega os registros (sem paginação ou com, se preferir)
         $votes = $query->get();
 
-        return view('livewire.voting.vote.list-vote', [
-            'votes' => $votes,
-        ]);
+        return view('livewire.voting.vote.list-vote', compact('votes'));
     }
 }

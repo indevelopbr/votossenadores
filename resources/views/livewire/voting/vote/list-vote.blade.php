@@ -9,12 +9,18 @@
     <div class="mx-auto max-w-7xl mb-4">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
             <!-- Filtro por Nome -->
-            <input type="text" wire:model.live="filterName" placeholder="Nome" class="border border-gray-300 rounded px-2 py-1 focus:outline-none  focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
+            <input 
+                type="text" 
+                wire:model.live="filterName" 
+                placeholder="Nome" 
+                class="border border-gray-300 rounded px-2 py-1 focus:outline-none  
+                       focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" 
+            />
 
             <!-- Filtro por Partido -->
             <input 
                 type="text" 
-                wire:model="filterParty" 
+                wire:model.live="filterParty" 
                 placeholder="Partido" 
                 class="border border-gray-300 rounded px-2 py-1 focus:outline-none 
                        focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
@@ -23,7 +29,7 @@
             <!-- Filtro por UF -->
             <input 
                 type="text" 
-                wire:model="filterUf" 
+                wire:model.live="filterUf" 
                 placeholder="UF" 
                 class="border border-gray-300 rounded px-2 py-1 focus:outline-none 
                        focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
@@ -48,8 +54,13 @@
                         <tr>
                             <!-- Foto -->
                             <td class="px-4 py-1 whitespace-nowrap">
-                                <img  src="{{ $vote->senator->image_profile }}" alt="Foto de {{ $vote->senator->name }}" class="h-16 w-16 object-cover rounded-full">
+                                <img  
+                                    src="{{ $vote->senator->image_profile }}" 
+                                    alt="Foto de {{ $vote->senator->name }}" 
+                                    class="h-16 w-16 object-cover rounded-full"
+                                >
                             </td>
+
                             <!-- Nome -->
                             <td class="px-4 py-1 whitespace-nowrap">
                                 <div class="font-semibold text-gray-800">
@@ -60,24 +71,43 @@
                             <!-- Partido / UF -->
                             <td class="px-4 py-1 whitespace-nowrap">
                                 <div class="text-gray-600">
-                                    {{ $vote->senator->party->name }} - {{ $vote->senator->uf }}
+                                    {{-- Ajuste conforme sua model/relacionamento. Exemplo: --}}
+                                    {{ $vote->senator->party->name ?? 'Sem Partido' }} 
+                                    - {{ $vote->senator->uf }}
                                 </div>
                             </td>
+
                             <!-- Grupo de rádio: A FAVOR / Indefinido / Contra -->
-                            <td class="px-4 py-1 whitespace-nowrap justify-center">
+                            <td class="px-4 py-1 whitespace-nowrap">
                                 <div class="flex items-center space-x-4">
                                     <label class="inline-flex items-center">
-                                        <input type="radio"  wire:model.live="voto.{{ $vote->id }}" value="Y" class="form-radio text-indigo-600">
+                                        <input
+                                            type="radio"
+                                            wire:model.live="voto.{{ $vote->id }}" 
+                                            value="Y"
+                                            class="form-radio text-indigo-600"
+                                        >
                                         <span class="ml-2">{{ __('A Favor') }}</span>
                                     </label>
 
                                     <label class="inline-flex items-center">
-                                        <input type="radio" wire:model.live="voto.{{ $vote->id }}" value="I" class="form-radio text-indigo-600">
+                                        <input
+                                            type="radio"
+                                            wire:model.live="voto.{{ $vote->id }}"
+                                            value="I"
+                                            class="form-radio text-indigo-600"
+                                        >
                                         <span class="ml-2">{{ __('Indefinido') }}</span>
                                     </label>
+
                                     <label class="inline-flex items-center">
-                                        <input type="radio" wire:model.live="voto.{{ $vote->id }}" value="N" class="form-radio text-indigo-600">
-                                        <span class="ml-2">{{ ('Contra') }}</span>
+                                        <input
+                                            type="radio"
+                                            wire:model.live="voto.{{ $vote->id }}"
+                                            value="N"
+                                            class="form-radio text-indigo-600"
+                                        >
+                                        <span class="ml-2">{{ __('Contra') }}</span>
                                     </label>
                                 </div>
                             </td>
