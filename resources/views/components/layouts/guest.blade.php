@@ -595,13 +595,13 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
             <a href="#afavor" style="text-decoration: none;">
                 <div class="card votos-a-favor">
                     <div class="titulo">A FAVOR</div>
-                <span class="numero" data-duration="2000" data-to-value="36" data-from-value="0" data-delimiter=",">34</span>
+                <span class="numero" data-duration="2000" data-to-value="36" data-from-value="0" data-delimiter=",">33</span>
             </div>
                 </a>
             <a href="#indefinidos" style="text-decoration: none;">
                 <div class="card votos-abstencoes">
                 <div class="titulo">INDEFINIDOS</div>
-                <span class="numero" data-duration="2000" data-to-value="27" data-from-value="0" data-delimiter=",">30</span>
+                <span class="numero" data-duration="2000" data-to-value="27" data-from-value="0" data-delimiter=",">31</span>
             </div>
             </a>
             <a href="#contra" style="text-decoration: none;">
@@ -1271,28 +1271,7 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
             </div>
 </div>
                         
-                        <div class="parlamentar">
-    <div class="imagem">
-                        <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/0930eba828c034037784b845add54a5e.jpg" width="99" height="120" alt="Avatar de Rosana Martinelli">
-            </div>    
-    <div class="titulo">Rosana Martinelli</div>
-            <div class="titulo" style="margin: 0; font-weight: 700; font-size: 12px !important; text-transform: none !important;">Reeleição: 2030</div>
-        <div class="sigla">Partido Liberal - MT</div>
-    <div class="social-midia">
-                        <a href="https://web.archive.org/web/20240930204343/email:sen.rosanamartinelli@senado.leg.br" style="text-decoration: none;">
-            <i aria-hidden="true" class="icon icon-email"></i>
-        </a>
-        
-                <a href="https://web.archive.org/web/20240930204343/https://www.instagram.com/rosanamartinelli?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;">
-            <i aria-hidden="true" class="icon icon-instagram-1"></i>
-        </a>
-                        <a href="tel:6133036219" style="text-decoration: none;">
-            <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-square-alt" viewBox="0 0 448 512" xmlns="https://www.w3.org/2000/svg">
-                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
-            </svg>
-        </a>
-            </div>
-</div>
+                        
                         <div class="parlamentar">
     <div class="imagem">
                         <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/e799b6e3633aea2b4c8ccb94a4b3c72b.jpg" width="99" height="120" alt="Avatar de Sergio Moro">
@@ -1445,28 +1424,7 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
     <section class="votos votos-abstencoes" id="indefinidos">
         <h3 class="tipo-titulo"><span>INDEFINIDOS</span> <span><img decoding="async" src="https://web.archive.org/web/20240930204343im_/https://votossenadores.com.br/wp-content/plugins/votes-scoreboard/assets/images/icon.png"></span></h3>
         <div class="parlamentares votos-container">
-                        <div class="parlamentar">
-    <div class="imagem">
-                        <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/5a2dfa08fb4f5a8df2a85bef3faf6b85.jpg" width="99" height="120" alt="Avatar de André Amaral">
-            </div>    
-    <div class="titulo">André Amaral</div>
-            <div class="titulo" style="margin: 0; font-weight: 700; font-size: 12px !important; text-transform: none !important;">Reeleição: 2030</div>
-        <div class="sigla">União Brasil - PB</div>
-    <div class="social-midia">
-                        <a href="https://web.archive.org/web/20240930204343/email:sen.andreamaral@senado.leg.br" style="text-decoration: none;">
-            <i aria-hidden="true" class="icon icon-email"></i>
-        </a>
-        
-                <a href="https://web.archive.org/web/20240930204343/https://www.instagram.com/senadorandreamaral?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;">
-            <i aria-hidden="true" class="icon icon-instagram-1"></i>
-        </a>
-                        <a href="tel:6133035934" style="text-decoration: none;">
-            <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-square-alt" viewBox="0 0 448 512" xmlns="https://www.w3.org/2000/svg">
-                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
-            </svg>
-        </a>
-            </div>
-</div>
+
                         <div class="parlamentar">
     <div class="imagem">
                         <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/99b79f43322840902f72735a5f591240.jpg" width="99" height="120" alt="Avatar de Angelo Coronel">
@@ -1715,6 +1673,30 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
         </a>
             </div>
 </div>
+
+                        <div class="parlamentar">
+    <div class="imagem">
+                        <img loading="lazy" decoding="async" src="https://www.senado.leg.br/senadores/img/fotos-oficiais/senador4642.jpg" width="99" height="120" alt="Avatar de André Amaral">
+            </div>    
+    <div class="titulo">Efraim Filho</div>
+            <div class="titulo" style="margin: 0; font-weight: 700; font-size: 12px !important; text-transform: none !important;">Reeleição: 2030</div>
+        <div class="sigla">União Brasil - PB</div>
+    <div class="social-midia">
+                        <a href="https://web.archive.org/web/20240930204343/email:sen.andreamaral@senado.leg.br" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-email"></i>
+        </a>
+        
+                <a href="https://web.archive.org/web/20240930204343/https://www.instagram.com/senadorandreamaral?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-instagram-1"></i>
+        </a>
+                        <a href="tel:6133035934" style="text-decoration: none;">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-square-alt" viewBox="0 0 448 512" xmlns="https://www.w3.org/2000/svg">
+                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
+            </svg>
+        </a>
+            </div>
+</div>
+
 
                         <div class="parlamentar">
     <div class="imagem">
@@ -1989,6 +1971,34 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
         </a>
             </div>
 </div>
+
+                        <div class="parlamentar">
+    <div class="imagem">
+                        <img loading="lazy" decoding="async" src="https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6304.jpg" width="99" height="120" alt="Avatar de Marcelo Castro">
+            </div>    
+    <div class="titulo">Margareth Buzetti</div>
+            <div class="titulo" style="margin: 0; font-weight: 700; font-size: 12px !important; text-transform: none !important;">Reeleição: 2026</div>
+        <div class="sigla">Partido Social Democrático - MT</div>
+    <div class="social-midia">
+                <a href="https://web.archive.org/web/20240930204343/https://www.facebook.com/MarceloCastroPiauii" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-facebook"></i>
+        </a>
+                        <a href="https://web.archive.org/web/20240930204343/email:sen.marcelocastro@senado.leg.br" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-email"></i>
+        </a>
+        
+                <a href="https://web.archive.org/web/20240930204343/https://www.instagram.com/marcelocastropi?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-instagram-1"></i>
+        </a>
+                        <a href="tel:6133034078" style="text-decoration: none;">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-square-alt" viewBox="0 0 448 512" xmlns="https://www.w3.org/2000/svg">
+                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
+            </svg>
+        </a>
+            </div>
+</div>
+
+
                         <div class="parlamentar">
     <div class="imagem">
                         <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/18d4f9a9f3ffa1c2919c40821d3e4c28.jpg" width="99" height="120" alt="Avatar de Mecias de Jesus">
@@ -2161,6 +2171,33 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
         </a>
             </div>
 </div>
+
+                        <div class="parlamentar">
+    <div class="imagem">
+                        <img loading="lazy" decoding="async" src="https://www.senado.leg.br/senadores/img/fotos-oficiais/senador1173.jpg" width="99" height="120" alt="Avatar de Veneziano Vital do Rêgo">
+            </div>    
+    <div class="titulo">Wellington Fagundes</div>
+            <div class="titulo" style="margin: 0; font-weight: 700; font-size: 12px !important; text-transform: none !important;">Reeleição: 2026</div>
+        <div class="sigla">Partido Liberal - MT</div>
+    <div class="social-midia">
+                <a href="https://web.archive.org/web/20240930204343/https://www.facebook.com/veneziano.vital.31" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-facebook"></i>
+        </a>
+                        <a href="https://web.archive.org/web/20240930204343/email:sen.venezianovitaldorego@senado.leg.br" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-email"></i>
+        </a>
+        
+                <a href="https://web.archive.org/web/20240930204343/https://www.instagram.com/venezianovitalpb?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-instagram-1"></i>
+        </a>
+                        <a href="tel:6133032252" style="text-decoration: none;">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-square-alt" viewBox="0 0 448 512" xmlns="https://www.w3.org/2000/svg">
+                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
+            </svg>
+        </a>
+            </div>
+</div>
+
                         <div class="parlamentar">
     <div class="imagem">
                         <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/6564aee5302a0c23371d2e0568a5fe34.jpg" width="99" height="120" alt="Avatar de Zenaide Maia">
