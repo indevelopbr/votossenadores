@@ -20,50 +20,13 @@
     <link rel="stylesheet" href="{{ asset('assets/css/post-507.css') }}" media="all">
     
     <script src="{{ asset('assets/js/jquery.min.js') . '?ver=3.7.1' }}"></script>
-    <script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+    <script src="{{ asset('assets/js/jquery-migrate.min.js') . '?ver=3.4.1' }}"></script>
 
-<!-- Snippet da tag do Google (gtag.js) adicionado pelo Site Kit -->
-
-<!-- Snippet do Google Analytics adicionado pelo Site Kit -->
-<script src="https://web.archive.org/web/20240930204343js_/https://www.googletagmanager.com/gtag/js?id=GT-MQXZG5TF" id="google_gtagjs-js" async=""></script>
-<script id="google_gtagjs-js-after">
-window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
-gtag("set","linker",{"domains":["votossenadores.com.br"]});
-gtag("js", new Date());
-gtag("set", "developer_id.dZTNiMT", true);
-gtag("config", "GT-MQXZG5TF");
-</script>
-
-<!-- Fim do snippet da tag do Google (gtag.js) adicionado pelo Site Kit -->
-<link rel="https://api.w.org/" href="https://votossenadores.com.br/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://web.archive.org/web/20240930204343/https://votossenadores.com.br/wp-json/wp/v2/pages/807"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://votossenadores.com.br/xmlrpc.php?rsd">
-<meta name="generator" content="WordPress 6.6.2">
-<link rel="canonical" href="https://web.archive.org/web/20240930204343/https://votossenadores.com.br/">
-<link rel="shortlink" href="https://web.archive.org/web/20240930204343/https://votossenadores.com.br/">
-<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://web.archive.org/web/20240930204343/https://votossenadores.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvotossenadores.com.br%2F">
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://web.archive.org/web/20240930204343/https://votossenadores.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvotossenadores.com.br%2F&amp;format=xml">
-<meta name="cdp-version" content="1.4.9"><meta name="generator" content="Site Kit by Google 1.136.0"><meta name="generator" content="Elementor 3.24.4; features: e_font_icon_svg, additional_custom_breakpoints, e_optimized_control_loading; settings: css_print_method-external, google_font-enabled, font_display-swap">
-			<style>
-				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
-				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
-					background-image: none !important;
-				}
-				@media screen and (max-height: 1024px) {
-					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
-					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
-						background-image: none !important;
-					}
-				}
-				@media screen and (max-height: 640px) {
-					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
-					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
-						background-image: none !important;
-					}
-				}
-			</style>
-			<link rel="icon" href="https://web.archive.org/web/20240930204343im_/https://votossenadores.com.br/wp-content/uploads/2024/08/favicon-150x150.png" sizes="32x32">
-<link rel="icon" href="https://web.archive.org/web/20240930204343im_/https://votossenadores.com.br/wp-content/uploads/2024/08/favicon-300x300.png" sizes="192x192">
-<link rel="apple-touch-icon" href="https://web.archive.org/web/20240930204343im_/https://votossenadores.com.br/wp-content/uploads/2024/08/favicon-300x300.png">
-<meta name="msapplication-TileImage" content="https://votossenadores.com.br/wp-content/uploads/2024/08/favicon-300x300.png">
+    
+    <link rel="icon" href="{{ asset('assets/images/favicon-150x150.png') }}" sizes="32x32">
+    <link rel="icon" href="{{ asset('assets/images/favicon-300x300.png') }}" sizes="192x192">
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/favicon-300x300.png') }}">
+    <meta name="msapplication-TileImage" content="{{ asset('assets/images/favicon-300x300.png') }}">
 		<style id="wp-custom-css">
 			.mapa.votos-container a {
     text-decoration: none;
@@ -1270,7 +1233,33 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
         </a>
             </div>
 </div>
-                        
+
+
+                                        <div class="parlamentar">
+    <div class="imagem">
+                        <img loading="lazy" decoding="async" src="https://www.senado.leg.br/senadores/img/fotos-oficiais/senador4694.jpg" width="99" height="120" alt="Avatar de Flávio Arns">
+            </div>    
+    <div class="titulo">Rogerio Marinho</div>
+            <div class="titulo" style="margin: 0; font-weight: 700; font-size: 12px !important; text-transform: none !important;">Reeleição: 2026</div>
+        <div class="sigla">Partido Liberal - RN</div>
+    <div class="social-midia">
+                <a href="https://web.archive.org/web/20240930204343/https://www.facebook.com/flavioarns" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-facebook"></i>
+        </a>
+                        <a href="https://web.archive.org/web/20240930204343/email:sen.flavioarns@senado.leg.br" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-email"></i>
+        </a>
+        
+                <a href="https://web.archive.org/web/20240930204343/https://www.instagram.com/flavioarns?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-instagram-1"></i>
+        </a>
+                        <a href="tel:6133036301" style="text-decoration: none;">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-square-alt" viewBox="0 0 448 512" xmlns="https://www.w3.org/2000/svg">
+                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
+            </svg>
+        </a>
+            </div>
+</div>        
                         
                         <div class="parlamentar">
     <div class="imagem">
@@ -1750,31 +1739,7 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
         </a>
             </div>
 </div>
-                        <div class="parlamentar">
-    <div class="imagem">
-                        <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/3d6447229d03200defc5734b0bfbb048.jpg" width="99" height="120" alt="Avatar de Flávio Arns">
-            </div>    
-    <div class="titulo">Flávio Arns</div>
-            <div class="titulo" style="margin: 0; font-weight: 700; font-size: 12px !important; text-transform: none !important;">Reeleição: 2026</div>
-        <div class="sigla">Partido Socialista Brasileiro - PR</div>
-    <div class="social-midia">
-                <a href="https://web.archive.org/web/20240930204343/https://www.facebook.com/flavioarns" style="text-decoration: none;">
-            <i aria-hidden="true" class="icon icon-facebook"></i>
-        </a>
-                        <a href="https://web.archive.org/web/20240930204343/email:sen.flavioarns@senado.leg.br" style="text-decoration: none;">
-            <i aria-hidden="true" class="icon icon-email"></i>
-        </a>
-        
-                <a href="https://web.archive.org/web/20240930204343/https://www.instagram.com/flavioarns?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;">
-            <i aria-hidden="true" class="icon icon-instagram-1"></i>
-        </a>
-                        <a href="tel:6133036301" style="text-decoration: none;">
-            <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-square-alt" viewBox="0 0 448 512" xmlns="https://www.w3.org/2000/svg">
-                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
-            </svg>
-        </a>
-            </div>
-</div>
+
                         <div class="parlamentar">
     <div class="imagem">
                         <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/0e63e1ef86a4e383905c15292d0c18d1.jpg" width="99" height="120" alt="Avatar de Giordano">
