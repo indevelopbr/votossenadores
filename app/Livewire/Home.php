@@ -2,9 +2,7 @@
 
 namespace App\Livewire;
 
-use App\Models\Partido;
-use App\Services\SenadorServices;
-use Illuminate\Support\Facades\Cache;
+use App\Models\Voting;
 use Livewire\Component;
 
 class Home extends Component
@@ -14,7 +12,11 @@ class Home extends Component
 
     public function render()
     {
-        return view('livewire.home')
+        $voting = Voting::first();
+
+        return view('livewire.home', [
+                'voting' => $voting,
+            ])
             ->layout('components.layouts.guest')
             ->title(' - Impeachment de Alexandre de Moraes');
     }

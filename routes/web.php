@@ -1,17 +1,15 @@
 <?php
 
-use App\Livewire\Auth\CriarVotacao;
 use App\Livewire\Auth\EditarVoto;
-use App\Livewire\Auth\Votacoes;
 use App\Livewire\Home;
 use App\Livewire\Partidos;
+use App\Livewire\Voting\ListVotings;
+use App\Livewire\Voting\Vote\ListVote;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth', 'verified'])->prefix('cms')->group(function () {
-    Route::get('/votacoes', Votacoes::class)->name('votacoes');
-    Route::get('/votacoes/criar', CriarVotacao::class)->name('votacoes.criar');
-    
-    Route::get('/votacoes/{votacao}/votos', EditarVoto::class)->name('votacoes.votos');
+    Route::get('/votacoes', ListVotings::class)->name('votacoes');
+    Route::get('/votacoes/{voting}/votos', ListVote::class)->name('votacoes.votos');
 });
 
 Route::get('/', Home::class)->name('home');

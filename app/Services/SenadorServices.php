@@ -1,11 +1,15 @@
 <?php
 namespace App\Services;
 
-use App\Models\Partido;
-use App\Models\Senador;
-use App\Models\Votacao;
+use App\Models\Party;
+use App\Models\Senator;
+use App\Models\Voting;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Intervention\Image\Drivers\Gd\Driver;
+use Intervention\Image\Encoders\AutoEncoder;
+use Intervention\Image\ImageManager;
 
 class SenadorServices
 {
@@ -71,32 +75,26 @@ class SenadorServices
                         if ($logoUrl) {
                             $logoPath = $this->downloadImageLogoPartido($logoUrl, $item['Sigla']);
                         }
-
-                        $item['logo']       = $logoPath;
-                        $item['site']       = $tempPartido['urlWebSite'] ?? null;
-                        $item['facebook']   = $tempPartido['urlFacebook'] ?? null;
                     }
                 }
 
-                $partido = Partido::updateOrCreate([
-                    'id'            => $item['Codigo'],
-                    'sigla'         => $item['Sigla'],
+                $partido = Party::updateOrCreate([
+                    'id' => $item['Codigo']
                 ]);
 
                 $partido->update([
-                    'nome'          => $item['Nome'],
-                    'logo'          => $item['logo'] ?? null,
-                    'site'          => $item['site'] ?? null,
-                    'facebook'      => $item['facebook'] ?? null,
-                    'data_criacao'  => $item['DataCriacao'],
-                    'data_extincao' => $item['DataExtincao'] ?? null,
+                    'name'              => $item['Nome'] ?? '',
+                    'acronym'           => $item['Sigla'] ?? null,
+                    'image_logo'        => $logoPath ?? null,
+                    'foundation_date'   => $item['DataCriacao'] ?? null,
+                    'data_extincao'     => $item['DataExtincao'] ?? null,
                 ]);
                 $partido->save();
 
                 echo "Partido {$item['Sigla']} atualizado com sucesso!\n";
             }
         } catch (\Exception $e) {
-            dd($e->getMessage());
+            echo $e->getMessage();
         }
     }
 
@@ -140,32 +138,30 @@ class SenadorServices
 
                 $sigla = iconv('UTF-8', 'ASCII//TRANSLIT', $senador['SiglaPartidoParlamentar'] ?? '');
                 $sigla = preg_replace('/[^a-zA-Z0-9]/', '', $sigla);
-                $sigla = Partido::where('sigla', $sigla)
-                    ->whereNull('data_extincao')
-                    ->first();
 
-                $newSenador = Senador::updateOrCreate([
-                    'id'            => (int) ($senador['CodigoParlamentar'] ?? 0)
+                $party = Party::where('acronym', $sigla)->first();
+
+                $newSenador = Senator::updateOrCreate([
+                    'id'            => (int) ($senador['CodigoParlamentar'] ?? 0),
+                    'party_id'      => $party->id ?? null,
                 ]);
 
                 $newSenador->update([
-                    'codigo_publico_na_leg_atual'   => $senador['CodigoPublicoNaLegAtual'] ?? '',
-                    'nome'                          => $senador['NomeParlamentar'] ?? '',
-                    'nome_completo'                 => $senador['NomeCompletoParlamentar'] ?? '',
-                    'sexo'                          => $senador['SexoParlamentar'] ?? '',
-                    'forma_tratamento'              => $senador['FormaTratamento'] ?? '',
-                    'url_foto'                      => $imagePath ?? '',
-                    'url_pagina'                    => $senador['UrlPaginaParlamentar'] ?? null,
-                    'email'                         => $senador['EmailParlamentar'] ?? null,
-                    'telefone'                      => '+5561' . ($senador['Telefones']['Telefone'][0]['NumeroTelefone'] ?? '6100000000'),
-                    'partido_id'                    => $sigla->id ?? null,
-                    'uf'                            => $senador['UfParlamentar'] ?? '',
-                    'membro_mesa'                   => ($senador['MembroMesa'] ?? '') == 'Sim' ? true : false,
-                    'membro_lideranca'              => ($senador['MembroLideranca'] ?? '') == 'Sim' ? true : false,
+                    'name'                  => $senador['NomeParlamentar'],
+                    'email'                 => $senador['EmailParlamentar'],
+                    'phone'                 => '+5561' . $senador['Telefones']['Telefone'][0]['NumeroTelefone'],
+                    'uf'                    => $senador['UfParlamentar'],
+                    'image_profile'         => $imagePath ?? '',
+                    'facebook'              => null,
+                    'instagram'             => null,
+                    'twitter'               => null,
+                    'site'                  => null,
+                    'birth_date'            => null,
+                    're_election'           => $this->getFimMandado($item['Mandato']),
                 ]);
                 $newSenador->save();
 
-                echo "Senador {$newSenador->nome} atualizado com sucesso!\n";
+                echo "Senador {$newSenador->name} atualizado com sucesso!\n";
             }
         } catch (\Exception $e) {
             dd($e->getMessage());
@@ -176,19 +172,50 @@ class SenadorServices
     {
         try {
             $imageContent = file_get_contents($url);
-
-            if ($imageContent) {
-                $extension = pathinfo(parse_url($url, PHP_URL_PATH), PATHINFO_EXTENSION);
-                $filename = "uploads/partidos/{$sigla}/senadores/{$nome}." . ($extension ?: 'png'); // Default para PNG
-                Storage::put($filename, $imageContent);
-
-                return Storage::url($filename); // Retorna URL pública ou caminho
+            if (!$imageContent) {
+                return null;
             }
+    
+            $slugName = Str::slug($nome, '-');
+
+            $extension = pathinfo(parse_url($url, PHP_URL_PATH), PATHINFO_EXTENSION);
+            $extension = strtolower($extension);
+
+            $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+            if (!in_array($extension, $allowedExtensions)) {
+                $extension = 'jpg';
+            }
+ 
+            $uniqueFilename = sprintf('%s-%s.%s', $slugName, uniqid(), $extension);
+    
+            $directory = "uploads/partidos/{$sigla}/senadores";
+            $fullPath = "{$directory}/{$uniqueFilename}";
+
+            $manager    = new ImageManager(Driver::class);
+            $image      = $manager->read($imageContent);
+            $encoded    = $image->encode(new AutoEncoder(quality: 75));
+
+            $encodedBinary = (string) $encoded;
+
+            Storage::disk('public')->put($fullPath, $encodedBinary);
+
+            return Storage::disk('public')->url($fullPath);
+    
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
-
+    
         return null;
+    }
+
+    public function getFimMandado($data)
+    {
+        if (!empty($data['SegundaLegislaturaDoMandato'])) {
+            return Carbon::parse($data['SegundaLegislaturaDoMandato']['DataFim'])->format('Y-m-d');
+        } else {
+            return Carbon::parse($data['PrimeiraLegislaturaDoMandato']['DataFim'])->format('Y-m-d');
+        }
     }
 
     public function updateVotacoesSenador($id)
@@ -197,13 +224,13 @@ class SenadorServices
         $votacoes = json_decode($response, true)['VotacoesComissao']['Votacoes']['Votacao'];
 
         foreach ($votacoes as $votacao) {
-            $exsiste = Votacao::where('codigo_votacao', $votacao['CodigoVotacao'])->first();
+            $exsiste = Voting::where('codigo_votacao', $votacao['CodigoVotacao'])->first();
 
             if ($exsiste) {
                 continue;
             }
 
-            $newVotacao = Votacao::create([
+            $newVotacao = Voting::create([
                 "codigo_votacao"                    => $votacao['CodigoVotacao'],
                 "sigla_casa_colegiado"              => $votacao['SiglaCasaColegiado'],
                 "codigo_reuniao"                    => $votacao['CodigoReuniao'],
@@ -231,7 +258,7 @@ class SenadorServices
                 $sigla = iconv('UTF-8', 'ASCII//TRANSLIT', $voto['SiglaPartidoParlamentar']);
                 $sigla = preg_replace('/[^a-zA-Z0-9]/', '', $sigla);
                 $dataReuniao = Carbon::parse($votacao['DataHoraInicioReuniao'])->format('Y-m-d');
-                $partido = Partido::where('sigla', $sigla)
+                $partido = Voting::where('sigla', $sigla)
                     ->where('data_criacao', '<=', $dataReuniao)
                     ->where(function($query) use ($dataReuniao) {
                         $query->where('data_extincao', '>=', $dataReuniao)
@@ -260,10 +287,8 @@ class SenadorServices
         $this->updatePartidos();
         $this->updateSenadoresAtual();
 
-        $senadores = Senador::all();
-
-        foreach ($senadores as $senador) {
-            $this->updateVotacoesSenador($senador->id);
-        }
+        //foreach ($senadores as $senador) {
+        //    $this->updateVotacoesSenador($senador->id);
+        //}
     }
 }
