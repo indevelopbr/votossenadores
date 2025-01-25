@@ -17,6 +17,10 @@ class Home extends Component
         $this->selectedUf = $request->input('uf');
     }
 
+    public function selectedUfId(string $uf) {
+        $this->selectedUf = $uf;
+    }
+
     public function render()
     {
         // Obtém a votação do cache ou busca no banco

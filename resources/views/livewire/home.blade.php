@@ -229,75 +229,72 @@
                                             <h3>{{ __('Norte') }}</h3>
                                             <a href="#" data-toggle-modal="#modal-norte">×</a>
                                         </div>
-                                        <div><a href="https://votossenadores.com.br/?uf=AC&ion=Norte">{{ __('Acre') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=AP&ion=Norte">{{ __('Amapá') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=AM&ion=Norte">{{ __('Amazonas') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=PA&ion=Norte">{{ __('Pará') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=RO&ion=Norte">{{ __('Rondônia') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=RR&ion=Norte">{{ __('Roraima') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=TO&ion=Norte">{{ __('Tocantis') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('AC')">{{ __('Acre') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('AP')">{{ __('Amapá') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('AM')">{{ __('Amazonas') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('PA')">{{ __('Pará') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('RO')">{{ __('Rondônia') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('RR')">{{ __('Roraima') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('TO')">{{ __('Tocantins') }}</a></div>
                                     </div>
                                 </div>
+
                                 <div id="modal-nordeste" class="modal">
                                     <div class="modal-inner">
                                         <div>
                                             <h3>{{ __('Nordeste') }}</h3>
                                             <a href="#" data-toggle-modal="#modal-nordeste">×</a>
                                         </div>
-                                        <div><a href="https://votossenadores.com.br/?uf=AL&ion=Nordeste">{{ __('Alagoas') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=BA&ion=Nordeste">{{ __('Bahia') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=CE&ion=Nordeste">{{ __('Ceará') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=MA&ion=Nordeste">{{ __('Maranhão') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=PB&ion=Nordeste">{{ __('Paraíba') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=PE&ion=Nordeste">{{ __('Pernambuco') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=PI&ion=Nordeste">{{ __('Piauí') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=RN&ion=Nordeste">{{ __('Rio Grande do Norte') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=SE&ion=Nordeste">{{ __('Sergipe') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('AL')">{{ __('Alagoas') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('BA')">{{ __('Bahia') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('CE')">{{ __('Ceará') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('MA')">{{ __('Maranhão') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('PB')">{{ __('Paraíba') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('PE')">{{ __('Pernambuco') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('PI')">{{ __('Piauí') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('RN')">{{ __('Rio Grande do Norte') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('SE')">{{ __('Sergipe') }}</a></div>
                                     </div>
                                 </div>
+
                                 <div id="modal-centro-oeste" class="modal">
                                     <div class="modal-inner">
                                         <div>
-                                            <h3>{{ __('Centro-oeste') }}</h3>
+                                            <h3>{{ __('Centro-Oeste') }}</h3>
                                             <a href="#" data-toggle-modal="#modal-centro-oeste">×</a>
                                         </div>
-                                        <div><a href="https://votossenadores.com.br/?uf=DF&ion=Centro-Oeste">{{ __('Distrito Federal') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=GO&ion=Centro-Oeste">{{ __('Goiás') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=MT&ion=Centro-Oeste">{{ __('Mato Grosso') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=MS&ion=Centro-Oeste">{{ __('Mato Grosso do Sul') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('DF')">{{ __('Distrito Federal') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('GO')">{{ __('Goiás') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('MT')">{{ __('Mato Grosso') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('MS')">{{ __('Mato Grosso do Sul') }}</a></div>
                                     </div>
                                 </div>
-                                <div id="modal-suldeste" class="modal">
-                                    <div class="modal-inner">
-                                        <div>
-                                            <h3>{{ __('Suldeste') }}</h3>
-                                            <a href="#" data-toggle-modal="#modal-suldeste">×</a>
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <div id="modal-sul" class="modal">
                                     <div class="modal-inner">
                                         <div>
-                                            <h3>Sul</h3>
+                                            <h3>{{ __('Sul') }}</h3>
                                             <a href="#" data-toggle-modal="#modal-sul">×</a>
                                         </div>
-                                        <div><a href="https://votossenadores.com.br/?uf=PR®ion=Sul">{{ __('Paraná') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=RS®ion=Sul">{{ __('Rio Grande do Sul') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=SC®ion=Sul">{{ __('Santa Catarina') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('PR')">{{ __('Paraná') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('RS')">{{ __('Rio Grande do Sul') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('SC')">{{ __('Santa Catarina') }}</a></div>
                                     </div>
                                 </div>
+
                                 <div id="modal-sudeste" class="modal">
                                     <div class="modal-inner">
                                         <div>
                                             <h3>{{ __('Sudeste') }}</h3>
                                             <a href="#" data-toggle-modal="#modal-sudeste">×</a>
                                         </div>
-                                        <div><a href="https://votossenadores.com.br/?uf=ES®ion=Sudeste">{{ __('Espírito Santo') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=MG®ion=Sudeste">{{ __('Minas Gerais') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=RJ®ion=Sudeste">{{ __('Rio de Janeiro') }}</a></div>
-                                        <div><a href="https://votossenadores.com.br/?uf=SP®ion=Sudeste">{{ __('São Paulo') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('ES')">{{ __('Espírito Santo') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('MG')">{{ __('Minas Gerais') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('RJ')">{{ __('Rio de Janeiro') }}</a></div>
+                                        <div><a href="#" wire:click="selectedUfId('SP')">{{ __('São Paulo') }}</a></div>
                                     </div>
                                 </div>
+
                             </div>
                             <style>
                                 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
