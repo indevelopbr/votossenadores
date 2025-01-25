@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="{{ asset('assets/css/post-507.css') }}" media="all">
     
-    <script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+    <script src="{{ asset('assets/js/jquery.min.js') . '?ver=3.7.1' }}"></script>
     <script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
 
 <!-- Snippet da tag do Google (gtag.js) adicionado pelo Site Kit -->
@@ -1451,27 +1451,6 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
             </div>
 </div>
 
-
-
-                        <div class="parlamentar">
-    <div class="imagem">
-                        <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/202d6a11e4ee0c9ccf7268452855b5d1.jpg" width="99" height="120" alt="Avatar de Bene Camacho">
-            </div>    
-    <div class="titulo">Bene Camacho</div>
-            <div class="titulo" style="margin: 0; font-weight: 700; font-size: 12px !important; text-transform: none !important;">Reeleição: 2026</div>
-        <div class="sigla">Partido Social Democrático - MA</div>
-    <div class="social-midia">
-                        <a href="https://web.archive.org/web/20240930204343/email:sen.benecamacho@senado.leg.br" style="text-decoration: none;">
-            <i aria-hidden="true" class="icon icon-email"></i>
-        </a>
-        
-                        <a href="tel:6133036741" style="text-decoration: none;">
-            <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-square-alt" viewBox="0 0 448 512" xmlns="https://www.w3.org/2000/svg">
-                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
-            </svg>
-        </a>
-            </div>
-</div>
 
                         <div class="parlamentar">
     <div class="imagem">
