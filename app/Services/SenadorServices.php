@@ -3,6 +3,8 @@ namespace App\Services;
 
 use App\Models\Partido;
 use App\Models\Senador;
+use App\Models\Votacao;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 
 class SenadorServices
@@ -189,9 +191,79 @@ class SenadorServices
         return null;
     }
 
+    public function updateVotacoesSenador($id)
+    {
+        $response = $this->get(null, "votacaoComissao/parlamentar/{$id}");
+        $votacoes = json_decode($response, true)['VotacoesComissao']['Votacoes']['Votacao'];
+
+        foreach ($votacoes as $votacao) {
+            $exsiste = Votacao::where('codigo_votacao', $votacao['CodigoVotacao'])->first();
+
+            if ($exsiste) {
+                continue;
+            }
+
+            $newVotacao = Votacao::create([
+                "codigo_votacao"                    => $votacao['CodigoVotacao'],
+                "sigla_casa_colegiado"              => $votacao['SiglaCasaColegiado'],
+                "codigo_reuniao"                    => $votacao['CodigoReuniao'],
+                "data_hora_inicio_reuniao"          => $votacao['DataHoraInicioReuniao'],
+                "numero_reuniao_colegiado"          => $votacao['NumeroReuniaoColegiado'],
+                "tipo_reuniao"                      => $votacao['TipoReuniao'],
+                "codigo_colegiado"                  => $votacao['CodigoColegiado'],
+                "sigla_colegiado"                   => $votacao['SiglaColegiado'],
+                "nome_colegiado"                    => $votacao['NomeColegiado'],
+                "codigo_parlamentar_presidente"     => $votacao['CodigoParlamentarPresidente'],
+                "nome_parlamentar_presidente"       => $votacao['NomeParlamentarPresidente'],
+                "identificacao_materia"             => $votacao['IdentificacaoMateria'],
+                "descricao_identificacao_materia"   => $votacao['DescricaoIdentificacaoMateria'],
+                "descricao_votacao"                 => $votacao['DescricaoVotacao'],
+                "total_votos_sim"                   => $votacao['TotalVotosSim'],
+                "total_votos_nao"                   => $votacao['TotalVotosNao'],
+                "total_votos_abstencao"             => $votacao['TotalVotosAbstencao'],
+            ]);
+
+            echo "Votação {$newVotacao->nome_colegiado} criada com sucesso!\n"; 
+
+            $votos = $votacao['Votos']['Voto'];
+
+            foreach ($votos as $voto) {
+                $sigla = iconv('UTF-8', 'ASCII//TRANSLIT', $voto['SiglaPartidoParlamentar']);
+                $sigla = preg_replace('/[^a-zA-Z0-9]/', '', $sigla);
+                $dataReuniao = Carbon::parse($votacao['DataHoraInicioReuniao'])->format('Y-m-d');
+                $partido = Partido::where('sigla', $sigla)
+                    ->where('data_criacao', '<=', $dataReuniao)
+                    ->where(function($query) use ($dataReuniao) {
+                        $query->where('data_extincao', '>=', $dataReuniao)
+                            ->orWhereNull('data_extincao');
+                    })
+                    ->first();
+
+                $newVoto = $newVotacao->votos()->create([
+                    "votacao_id"            => $newVotacao->id,
+                    "senador_id"            => $voto['CodigoParlamentar'],
+                    "partido_id"            => $partido->id,
+                    "sigla_casa_parlamentar"=> $voto['SiglaCasaParlamentar'],
+                    "qualidade_voto"        => $voto['QualidadeVoto'],
+                    "voto_presidente"       => $voto['VotoPresidente'] === "false" ? false : true,
+                ]);
+
+                $senadorNome = $newVoto->senador->nome ?? '';
+
+                echo "Voto do senador {$senadorNome} criado com sucesso!\n";
+            }
+        }
+    }
+
     public function initUpdate()
     {
         $this->updatePartidos();
         $this->updateSenadoresAtual();
+
+        $senadores = Senador::all();
+
+        foreach ($senadores as $senador) {
+            $this->updateVotacoesSenador($senador->id);
+        }
     }
 }

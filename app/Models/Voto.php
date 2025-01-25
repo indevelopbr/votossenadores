@@ -9,38 +9,30 @@ use Illuminate\Notifications\Notifiable;
 use Spatie\Activitylog\LogOptions;
 use Spatie\Activitylog\Traits\LogsActivity;
 
-class Senador extends Model
+class Voto extends Model
 {
     use HasFactory, Notifiable, SoftDeletes, LogsActivity;
 
-    protected $table = 'senadores';
+    protected $table = 'votos';
 
     protected $fillable = [
-        'id',
-        'codigo_publico_na_leg_atual',
-        'nome',
-        'nome_completo',
-        'sexo',
-        'forma_tratamento',
-        'url_foto',
-        'url_pagina',
-        'email',
-        'telefone',
+        'votacao_id',
+        'senador_id',
         'partido_id',
-        'uf',
-        'membro_mesa',
-        'membro_lideranca',
+        'sigla_casa_parlamentar',
+        'qualidade_voto',
+        'voto_presidente'
     ];
 
     public function getActivitylogOptions(): LogOptions
     {
         return LogOptions::defaults()
             ->logOnly(['*'])
-            ->useLogName('senador');
+            ->useLogName('voto');
     }
 
-    public function partido()
+    public function senador()
     {
-        return $this->belongsTo(Partido::class);
+        return $this->belongsTo(Senador::class, 'senador_id', 'id')->withTrashed();
     }
 }
