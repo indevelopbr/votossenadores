@@ -310,7 +310,7 @@
                             <div class="elementor-element elementor-element-a50a199 elementor-widget elementor-widget-heading" data-id="a50a199" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
                                     <h2 class="elementor-heading-title elementor-size-default">
-                                        <a href="https://www.change.org/p/impeachment-de-alexandre-de-moraes-pelo-bem-da-democracia" target="_blank">
+                                        <a href="https://www.change.org/p/impeachment-de-alexandre-de-moraes-pelo-bem-da-democracia" target="_blank" style="color: white">
                                             {{ __('Assine a maior petição pública pelo impeachment na história do Brasil! Meta: 5 milhões de assinaturas.') }}
                                         </a>
                                     </h2>
@@ -384,180 +384,54 @@
             {{ $slot }}
         </main>
 
-			<div data-elementor-type="footer" data-elementor-id="712" class="elementor elementor-712 elementor-location-footer" data-elementor-post-type="elementor_library">
+        <div data-elementor-type="footer" data-elementor-id="712" class="elementor elementor-712 elementor-location-footer" data-elementor-post-type="elementor_library">
 			<div class="elementor-element elementor-element-f891df8 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="f891df8" data-element_type="container" id="more-votes" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-b04cafc elementor-widget elementor-widget-heading" data-id="b04cafc" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Conheça a posição do seu deputado federal no Impeachment de Alexandre de Moraes</h2>		</div>
+                <div class="e-con-inner">
+				    <div class="elementor-element elementor-element-b04cafc elementor-widget elementor-widget-heading" data-id="b04cafc" data-element_type="widget" data-widget_type="heading.default">
+				        <div class="elementor-widget-container">
+			                <h2 class="elementor-heading-title elementor-size-default">Conheça a posição do seu deputado federal no Impeachment de Alexandre de Moraes</h2>
+                        </div>
+				    </div>
+				    <div class="elementor-element elementor-element-1239397 elementor-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="1239397" data-element_type="widget" data-widget_type="button.default">
+				        <div class="elementor-widget-container">
+					        <div class="elementor-button-wrapper">
+			                <a class="elementor-button elementor-button-link elementor-size-sm" href="https://votosdeputados.com.br/" target="_blank">
+                                <span class="elementor-button-content-wrapper">
+                                    <span class="elementor-button-text">Acessar Votos Deputados</span>
+                                </span>
+                            </a>
+		                </div>
+                    </div>
 				</div>
-				<div class="elementor-element elementor-element-1239397 elementor-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="1239397" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-button-wrapper">
-			<a class="elementor-button elementor-button-link elementor-size-sm" href="https://web.archive.org/web/20240930204343/https://votosdeputados.com.br/" target="_blank">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Acessar Votos Deputados</span>
-					</span>
-					</a>
-		</div>
-				</div>
-				</div>
-					</div>
-				</div>
+            </div>
+        </div>
 		<div class="elementor-element elementor-element-12feac4 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="12feac4" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
+            <div class="e-con-inner"  style="align-items: center;">
 				<div class="elementor-element elementor-element-761b918 elementor-widget elementor-widget-heading" data-id="761b918" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Sobre o Votos Senadores</h2>		</div>
-				</div>
+                    <div class="elementor-widget-container">
+                        <h2 class="elementor-heading-title elementor-size-default">Sobre o Votos Senadores</h2>
+                    </div>
+                </div>
 				<div class="elementor-element elementor-element-27ed8ea elementor-widget elementor-widget-heading" data-id="27ed8ea" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Este site tem como objetivo apresentar as intenções de voto ou apoio dos senadores em exercício no Brasil aos projetos e pautas em discussão. Confira se eles estão honrando o voto que você, eleitor, depositou neles.</h2>		</div>
+				    <div class="elementor-widget-container">
+			            <h2 class="elementor-heading-title elementor-size-default">
+                            Este site tem como objetivo apresentar as intenções de voto ou apoio dos senadores em exercício no Brasil aos projetos e pautas em discussão. Confira se eles estão honrando o voto que você, eleitor, depositou neles.
+                        </h2>
+                    </div>
 				</div>
 				<div class="elementor-element elementor-element-7ad2cf4 elementor-widget elementor-widget-image" data-id="7ad2cf4" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img src="https://web.archive.org/web/20240930204343im_/https://votossenadores.com.br/wp-content/uploads/2024/07/logo-votossenadores-2.png" title="logo-votossenadores-2" alt="logo-votossenadores-2" loading="lazy">													</div>
-				</div>
-		<div class="elementor-element elementor-element-e7abcd3 e-con-full e-flex e-con e-child" data-id="e7abcd3" data-element_type="container">
-				<div class="elementor-element elementor-element-951d8ff elementor-widget elementor-widget-heading" data-id="951d8ff" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">© 2024 Direitos reservados</h2>		</div>
-				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-		
-		
-				
-				
-				
-				
-				
-					<script type="text/javascript">
-				const lazyloadRunObserver = () => {
-					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
-					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
-						entries.forEach( ( entry ) => {
-							if ( entry.isIntersecting ) {
-								let lazyloadBackground = entry.target;
-								if( lazyloadBackground ) {
-									lazyloadBackground.classList.add( 'e-lazyloaded' );
-								}
-								lazyloadBackgroundObserver.unobserve( entry.target );
-							}
-						});
-					}, { rootMargin: '200px 0px 200px 0px' } );
-					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
-						lazyloadBackgroundObserver.observe( lazyloadBackground );
-					} );
-				};
-				const events = [
-					'DOMContentLoaded',
-					'elementor/lazyload/observe',
-				];
-				events.forEach( ( event ) => {
-					document.addEventListener( event, lazyloadRunObserver );
-				} );
-			</script>
-			<link rel="stylesheet" id="widget-heading-css" href="https://web.archive.org/web/20240930204343cs_/https://votossenadores.com.br/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.24.4" media="all">
-<link rel="stylesheet" id="widget-image-css" href="https://web.archive.org/web/20240930204343cs_/https://votossenadores.com.br/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.24.4" media="all">
-<link rel="stylesheet" id="widget-text-editor-css" href="https://web.archive.org/web/20240930204343cs_/https://votossenadores.com.br/wp-content/plugins/elementor/assets/css/widget-text-editor.min.css?ver=3.24.4" media="all">
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=3.1.1" id="hello-theme-frontend-js"></script>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=3.2.8" id="elementskit-framework-js-frontend-js"></script>
-<script id="elementskit-framework-js-frontend-js-after">
-		var elementskit = {
-			resturl: 'https://web.archive.org/web/20240930204343/https://votossenadores.com.br/wp-json/elementskit/v1/',
-		}
-
-		
-</script>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=3.2.8" id="ekit-widget-scripts-js"></script>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.23.2" id="elementor-pro-webpack-runtime-js"></script>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.24.4" id="elementor-webpack-runtime-js"></script>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.24.4" id="elementor-frontend-modules-js"></script>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18" id="wp-hooks-js"></script>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
-<script id="wp-i18n-js-after">
-wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-</script>
-<script id="elementor-pro-frontend-js-before">
-var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-admin\/admin-ajax.php","nonce":"b36acc9c96","urls":{"assets":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
-</script>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.23.2" id="elementor-pro-frontend-js"></script>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
-<script id="elementor-frontend-js-extra">
-var uael_particles_script = {"uael_particles_url":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/ultimate-elementor\/assets\/min-js\/uael-particles.min.js","particles_url":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/ultimate-elementor\/assets\/lib\/particles\/particles.min.js","snowflakes_image":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/snowflake.svg","gift":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/gift.png","tree":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/tree.png","skull":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/skull.png","ghost":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/ghost.png","moon":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/moon.png","bat":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/bat.png","pumpkin":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/pumpkin.png"};
-</script>
-<script id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselWrapperAriaLabel":"Carrossel | Rolagem horizontal: Setas para esquerda e direita","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Dispositivos m\u00f3veis no modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Dispositivos m\u00f3veis no modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet no modo retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet no modo paisagem","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.24.4","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"container_grid":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_optimized_control_loading":true,"e_onboarding":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"home_screen":true,"ai-layout":true,"link-in-bio":true,"floating-buttons":true,"display-conditions":true,"form-submissions":true,"taxonomy-filter":true},"urls":{"assets":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-admin\/admin-ajax.php"},"nonces":{"floatingButtonsClickTracking":"65ed3bb65d"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_footer_logo_type":"logo"},"post":{"id":807,"title":"Votos%20Senadores%20%E2%80%93%20Impeachment%20de%20Alexandre%20de%20Moraes","excerpt":"","featuredImage":false}};
-</script>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.24.4" id="elementor-frontend-js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
-<script id="elementor-frontend-js-after">
-window.scope_array = [];
-								window.backend = 0;
-								jQuery.cachedScript = function( url, options ) {
-									// Allow user to set any option except for dataType, cache, and url.
-									options = jQuery.extend( options || {}, {
-										dataType: "script",
-										cache: true,
-										url: url
-									});
-									// Return the jqXHR object so we can chain callbacks.
-									return jQuery.ajax( options );
-								};
-							    jQuery( window ).on( "elementor/frontend/init", function() {
-									elementorFrontend.hooks.addAction( "frontend/element_ready/global", function( $scope, $ ){
-										if ( "undefined" == typeof $scope ) {
-												return;
-										}
-										if ( $scope.hasClass( "uael-particle-yes" ) ) {
-											window.scope_array.push( $scope );
-											$scope.find(".uael-particle-wrapper").addClass("js-is-enabled");
-										}else{
-											return;
-										}
-										if(elementorFrontend.isEditMode() && $scope.find(".uael-particle-wrapper").hasClass("js-is-enabled") && window.backend == 0 ){
-											var uael_url = uael_particles_script.uael_particles_url;
-
-											jQuery.cachedScript( uael_url );
-											window.backend = 1;
-										}else if(elementorFrontend.isEditMode()){
-											var uael_url = uael_particles_script.uael_particles_url;
-											jQuery.cachedScript( uael_url ).done(function(){
-												var flag = true;
-											});
-										}
-									});
-								});
-								 jQuery( document ).on( "ready elementor/popup/show", () => {
-									if ( jQuery.find( ".uael-particle-yes" ).length < 1 ) {
-										return;
-									}
-									var uael_url = uael_particles_script.uael_particles_url;
-									jQuery.cachedScript = function( url, options ) {
-										// Allow user to set any option except for dataType, cache, and url.
-										options = jQuery.extend( options || {}, {
-											dataType: "script",
-											cache: true,
-											url: url
-										});
-										// Return the jqXHR object so we can chain callbacks.
-										return jQuery.ajax( options );
-									};
-									jQuery.cachedScript( uael_url );
-								});	
-</script>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.23.2" id="pro-elements-handlers-js"></script><svg style="display: none;" class="e-font-icon-svg-symbols"></svg>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min.js?ver=3.2.8" id="animate-circle-js"></script>
-<script id="elementskit-elementor-js-extra">
-var ekit_config = {"ajaxurl":"https:\/\/web.archive.org\/web\/20240930204343\/https:\/\/votossenadores.com.br\/wp-admin\/admin-ajax.php","nonce":"629435f4dd"};
-</script>
-<script src="https://web.archive.org/web/20240930204343js_/https://votossenadores.com.br/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=3.2.8" id="elementskit-elementor-js"></script>
-
-
-
-
-
-
-<script src="https://web.archive.org/web/20240930204343/https://votossenadores.com.br/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.3"></script></body></html>
+				    <div class="elementor-widget-container">
+                        <img src="{{ asset('assets/images/logo-votossenadores-2.png') }}" title="logo-votossenadores-2" alt="logo-votossenadores-2" loading="lazy">													</div>
+				    </div>
+		            <div class="elementor-element elementor-element-e7abcd3 e-con-full e-flex e-con e-child" data-id="e7abcd3" data-element_type="container">
+				        <div class="elementor-element elementor-element-951d8ff elementor-widget elementor-widget-heading" data-id="951d8ff" data-element_type="widget" data-widget_type="heading.default">
+				            <div class="elementor-widget-container">
+			                    <h2 class="elementor-heading-title elementor-size-default">© 2024 Direitos reservados</h2>
+                            </div>
+				        </div>
+				    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
