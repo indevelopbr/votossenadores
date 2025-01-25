@@ -9,8 +9,13 @@ use Livewire\Component;
 
 class Home extends Component
 {
+    public function moun()
+    {}
+
     public function render()
     {
-        return view('livewire.home')->layout('components.layouts.guest');
+        return view('livewire.home')
+            ->layout('components.layouts.guest')
+            ->title(' - Impeachment de Alexandre de Moraes');
     }
 }
