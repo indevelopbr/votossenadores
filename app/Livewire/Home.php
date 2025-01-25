@@ -43,6 +43,8 @@ class Home extends Component
                 return isset($vote->senator) 
                     && $vote->senator->uf === $this->selectedUf;
             });
+        } else {
+            $filteredVotes = $voting->votes;
         }
         // Separa os votos por tipo
         $inFavor = $filteredVotes->where('vote', 'Y')->sortBy(fn($vote) => $vote->senator->name ?? '');
