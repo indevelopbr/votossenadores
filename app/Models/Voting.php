@@ -27,17 +27,17 @@ class Voting extends Model
         return $this->hasMany(Vote::class);
     }
 
-    public function getVoteInFavor()
+    public function voteInFavor()
     {
         return $this->hasMany(Vote::class)->where('vote', 'Y');
     }
 
-    public function getVoteAgainst()
+    public function voteAgainst()
     {
         return $this->hasMany(Vote::class)->where('vote', 'N');
     }
 
-    public function getVoteIndefinite()
+    public function voteIndefinite()
     {
         return $this->hasMany(Vote::class)->where('vote', 'I');
     }

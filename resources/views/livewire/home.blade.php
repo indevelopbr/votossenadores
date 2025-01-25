@@ -55,19 +55,25 @@
                                         <a href="#inFavor" style="text-decoration: none;">
                                             <div class="card votos-a-favor">
                                                 <div class="titulo">{{ __('A FAVOR') }}</div>
-                                                <span class="numero" data-duration="2000" data-to-value="36" data-from-value="0" data-delimiter=",">{{ $voting->getVoteInFavor()->count() }}</span>
+                                                <span class="numero" data-duration="2000" data-to-value="{{ $inFavor->count() }}" data-from-value="0" data-delimiter=",">
+                                                    {{ $inFavor->count() }}
+                                                </span>
                                             </div>
                                         </a>
                                         <a href="#indefinite" style="text-decoration: none;">
                                             <div class="card votos-abstencoes">
                                                 <div class="titulo">{{ __('INDEFINIDOS') }}</div>
-                                                <span class="numero" data-duration="2000" data-to-value="27" data-from-value="0" data-delimiter=",">{{ $voting->getVoteIndefinite()->count() }}</span>
+                                                <span class="numero" data-duration="2000" data-to-value="{{ $indefinite->count() }}" data-from-value="0" data-delimiter=",">
+                                                    {{ $indefinite->count() }}
+                                                </span>
                                             </div>
                                         </a>
                                         <a href="#against" style="text-decoration: none;">
                                             <div class="card votos-contra">
                                                 <div class="titulo">{{ __('CONTRA') }}</div>
-                                                <span class="numero" data-duration="2000" data-to-value="17" data-from-value="0" data-delimiter=",">{{ $voting->getVoteAgainst()->count() }}</span>
+                                                <span class="numero" data-duration="2000" data-to-value="{{ $against->count() }}" data-from-value="0" data-delimiter=",">
+                                                    {{ $against->count() }}
+                                                </span>
                                             </div>
                                         </a>
                                     </div>
@@ -80,7 +86,7 @@
                                         </span>
                                     </h3>
                                     <div class="parlamentares votos-container">
-                                        @foreach ($voting->getVoteInFavor()->get() as $vote)
+                                        @foreach ($inFavor as $vote)
                                             <div class="parlamentar">
                                                 <div class="imagem">
                                                     <img loading="lazy" decoding="async" src="{{$vote->senator->image_profile }}" width="99" height="120" alt="Avatar de Alan Rick">
@@ -93,27 +99,27 @@
                                                 <div class="social-midia">
                                                     @if ($vote->senator->facebook)
                                                         <a href="{{ $vote->senator->facebook }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-facebook"></i>
                                                         </a>
                                                     @endif
                                                     @if ($vote->senator->instagram)
                                                         <a href="{{ $vote->senator->instagram }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-instagram"></i>
                                                         </a>
                                                     @endif
                                                     @if ($vote->senator->twitter)
                                                         <a href="{{ $vote->senator->twitter }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-twitter-x"></i>
                                                         </a>
                                                     @endif
                                                     @if ($vote->senator->site)
                                                         <a href="{{ $vote->senator->site }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-browser-edge"></i>
                                                         </a>
                                                     @endif
                                                     @if ($vote->senator->phone)
                                                         <a href="{{ $vote->senator->phone }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-telephone"></i>
                                                         </a>
                                                     @endif
                                                 </div>
@@ -127,7 +133,7 @@
                                         <span><img decoding="async" src="{{ asset('assets/images/icon.png') }}"></span>
                                     </h3>
                                     <div class="parlamentares votos-container">
-                                        @foreach ($voting->getVoteIndefinite()->get() as $vote)
+                                        @foreach ($indefinite as $vote)
                                             <div class="parlamentar">
                                                 <div class="imagem">
                                                     <img loading="lazy" decoding="async" src="{{$vote->senator->image_profile }}" width="99" height="120" alt="Avatar de Alan Rick">
@@ -140,27 +146,27 @@
                                                 <div class="social-midia">
                                                     @if ($vote->senator->facebook)
                                                         <a href="{{ $vote->senator->facebook }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-facebook"></i>
                                                         </a>
                                                     @endif
                                                     @if ($vote->senator->instagram)
                                                         <a href="{{ $vote->senator->instagram }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-instagram"></i>
                                                         </a>
                                                     @endif
                                                     @if ($vote->senator->twitter)
                                                         <a href="{{ $vote->senator->twitter }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-twitter-x"></i>
                                                         </a>
                                                     @endif
                                                     @if ($vote->senator->site)
                                                         <a href="{{ $vote->senator->site }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-browser-edge"></i>
                                                         </a>
                                                     @endif
                                                     @if ($vote->senator->phone)
                                                         <a href="{{ $vote->senator->phone }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-telephone"></i>
                                                         </a>
                                                     @endif
                                                 </div>
@@ -176,7 +182,7 @@
                                         </span>
                                     </h3>
                                     <div class="parlamentares votos-container">
-                                        @foreach ($voting->getVoteAgainst()->get() as $vote)
+                                        @foreach ($against as $vote)
                                             <div class="parlamentar">
                                                 <div class="imagem">
                                                     <img loading="lazy" decoding="async" src="{{$vote->senator->image_profile }}" width="99" height="120" alt="Avatar de Alan Rick">
@@ -189,27 +195,27 @@
                                                 <div class="social-midia">
                                                     @if ($vote->senator->facebook)
                                                         <a href="{{ $vote->senator->facebook }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-facebook"></i>
                                                         </a>
                                                     @endif
                                                     @if ($vote->senator->instagram)
                                                         <a href="{{ $vote->senator->instagram }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-instagram"></i>
                                                         </a>
                                                     @endif
                                                     @if ($vote->senator->twitter)
                                                         <a href="{{ $vote->senator->twitter }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-twitter-x"></i>
                                                         </a>
                                                     @endif
                                                     @if ($vote->senator->site)
                                                         <a href="{{ $vote->senator->site }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-browser-edge"></i>
                                                         </a>
                                                     @endif
                                                     @if ($vote->senator->phone)
                                                         <a href="{{ $vote->senator->phone }}" style="text-decoration: none;">
-                                                            <i aria-hidden="true" class="icon icon-facebook"></i>
+                                                            <i class="bi bi-telephone"></i>
                                                         </a>
                                                     @endif
                                                 </div>

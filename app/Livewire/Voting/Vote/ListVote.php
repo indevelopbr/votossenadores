@@ -5,6 +5,7 @@ namespace App\Livewire\Voting\Vote;
 use App\Models\Senator;
 use App\Models\Vote;
 use App\Models\Voting;
+use Illuminate\Support\Facades\Cache;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -42,13 +43,17 @@ class ListVote extends Component
                 $vote->vote = $value;  // Ex: "A FAVOR", "Contra" ou "Indefinido"
                 $vote->save();
             }
+
+            Cache::forget('voting'); // remove a chave antiga
+            $voting = Voting::with(['votes.senator.party'])->first();
+            Cache::put('voting', $voting, 60); // grava a nova versão por 60s
         }
     }
 
     public function render()
     {
         // Filtra os registros
-        $query = Vote::with('senator')
+        $query = Vote::with('senator.party')
             ->where('voting_id', $this->voting->id);
 
         if ($this->filterName) {
