@@ -27,284 +27,281 @@
     <link rel="icon" href="{{ asset('assets/images/favicon-300x300.png') }}" sizes="192x192">
     <link rel="apple-touch-icon" href="{{ asset('assets/images/favicon-300x300.png') }}">
     <meta name="msapplication-TileImage" content="{{ asset('assets/images/favicon-300x300.png') }}">
-		<style id="wp-custom-css">
-			.mapa.votos-container a {
-    text-decoration: none;
-}
+    <style id="wp-custom-css">
+        .mapa.votos-container a {
+            text-decoration: none;
+        }
+        .post-807 .page-header {
+            display:none;
+        }
 
-.post-807 .page-header {
-	display:none;
-}
+        .wrap-votos .placar-titulo {
+        font-size: 20px !important;
+        font-weight: 500;
+            color:#135899 !important;
+            margin-top:40px;
+        }
 
-.wrap-votos .placar-titulo {
-  font-size: 20px !important;
-  font-weight: 500;
-	color:#135899 !important;
-	margin-top:40px;
-}
+        .cards .votos-a-favor {
+            border: none !important;
+            background-image:none !important;
+            background-color:#00a650 !important;
+        }
 
-.cards .votos-a-favor {
-	border: none !important;
-	background-image:none !important;
-	background-color:#00a650 !important;
-}
+        .cards .votos-a-favor .titulo {
+            color:#fff;
+            font-size:18px;
+        }
 
-.cards .votos-a-favor .titulo {
-	color:#fff;
-	font-size:18px;
-}
+        .cards .votos-a-favor .numero {
+            color:#fff;
+        }
 
-.cards .votos-a-favor .numero {
-	color:#fff;
-}
+        .cards .votos-abstencoes {
+            border: none !important;
+            background-image:none !important;
+            background-color:#e4a00f !important;
+        }
 
-.cards .votos-abstencoes {
-	border: none !important;
-	background-image:none !important;
-	background-color:#e4a00f !important;
-}
+        .cards .votos-abstencoes .titulo {
+            color:#fff;
+            font-size:18px;
+        }
 
-.cards .votos-abstencoes .titulo {
-	color:#fff;
-	font-size:18px;
-}
+        .cards .votos-abstencoes .numero {
+            color:#fff;
+        }
 
-.cards .votos-abstencoes .numero {
-	color:#fff;
-}
+        .cards .votos-contra {
+            border: none !important;
+            background-image:none !important;
+            background-color:#ed520d !important;
+        }
 
-.cards .votos-contra {
-	border: none !important;
-	background-image:none !important;
-	background-color:#ed520d !important;
-}
+        .cards .votos-contra .titulo {
+            color:#fff;
+            font-size:18px;
+        }
 
-.cards .votos-contra .titulo {
-	color:#fff;
-	font-size:18px;
-}
+        .cards .votos-contra .numero {
+            color:#fff;
+        }
 
-.cards .votos-contra .numero {
-	color:#fff;
-}
+        .mapa .mapa-regioes > a:hover svg, .mapa .mapa-regioes .active svg {
+        filter: none !important
+        }
 
-.mapa .mapa-regioes > a:hover svg, .mapa .mapa-regioes .active svg {
-  filter: none !important
-}
+        .mapa .mapa-regioes a svg {
+        height: 95px !important;
+        }
 
-.mapa .mapa-regioes a svg {
-  height: 95px !important;
-}
+        .mapa .mapa-regioes a {
+            font-size:14px;
+            font-weight: normal;
+        }
 
-.mapa .mapa-regioes a {
-	font-size:14px;
-	font-weight: normal;
-}
+        section.votos-a-favor {
+            width: 1140px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-bottom: 40px;
+            background-color:#fff !important;
+        }
+        .wrap-votos .votos-a-favor .tipo-titulo {
+        --border-color-tipo-titulo: none !important;
+        background-color: #f9f9f9 !important;
+            border: 1px solid #ccc;
+            border-radius:20px;
+            margin-bottom:20px;
+            color:#00a650;
+            font-size:22px;
+            font-weight:600;
+        }
+        .wrap-votos .votos-a-favor .tipo-titulo img {
+            display:none;
+        }
 
-section.votos-a-favor {
-	width: 1140px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding-bottom: 40px;
-	background-color:#fff !important;
-}
-.wrap-votos .votos-a-favor .tipo-titulo {
-  --border-color-tipo-titulo: none !important;
-  background-color: #f9f9f9 !important;
-	border: 1px solid #ccc;
-	border-radius:20px;
-	margin-bottom:20px;
-	color:#00a650;
-	font-size:22px;
-	font-weight:600;
-}
-.wrap-votos .votos-a-favor .tipo-titulo img {
-	display:none;
-}
+        section.votos-abstencoes {
+            width: 1140px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding-bottom: 40px;
+            background-color:#fff !important;
+        }
+        .wrap-votos .votos-abstencoes .tipo-titulo {
+            --border-color-tipo-titulo: none !important;
+            background-color: #f9f9f9 !important;
+            border: 1px solid #ccc;
+            border-radius:20px;
+            margin-bottom:20px;
+            color:#e4a00f;
+            font-size:22px;
+            font-weight:600;
+        }
+        .wrap-votos .votos-abstencoes .tipo-titulo img {
+            display:none;
+        }
 
-section.votos-abstencoes {
-	width: 1140px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding-bottom: 40px;
-	background-color:#fff !important;
-}
-.wrap-votos .votos-abstencoes .tipo-titulo {
-  --border-color-tipo-titulo: none !important;
-  background-color: #f9f9f9 !important;
-	border: 1px solid #ccc;
-	border-radius:20px;
-	margin-bottom:20px;
-	color:#e4a00f;
-	font-size:22px;
-	font-weight:600;
-}
-.wrap-votos .votos-abstencoes .tipo-titulo img {
-	display:none;
-}
+        section.votos-abstencoes .parlamentar .imagem img {
+            max-width:120px;
+            max-height:120px;
+            width: auto;
+            height: auto;
+            border:4px solid #e4a00f;
+            text-align:center;
+            padding: 3px;
+        }
 
-section.votos-abstencoes .parlamentar .imagem img {
-	max-width:120px;
-  max-height:120px;
-	width: auto;
-  height: auto;
-	border:4px solid #e4a00f;
-	text-align:center;
-	padding: 3px;
-}
+        section.votos-contra {
+            width: 1140px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding-bottom: 40px;
+            background-color:#fff !important;
+        }
+        .wrap-votos .votos-contra .tipo-titulo {
+            --border-color-tipo-titulo: none !important;
+            background-color: #f9f9f9 !important;
+            border: 1px solid #ccc;
+            border-radius:20px;
+            margin-bottom:20px;
+            color:#ed520d;
+            font-size:22px;
+            font-weight:600;
+        }
+        .wrap-votos .votos-contra .tipo-titulo img {
+            display:none;
+        }
 
-section.votos-contra {
-	width: 1140px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding-bottom: 40px;
-	background-color:#fff !important;
-}
-.wrap-votos .votos-contra .tipo-titulo {
-  --border-color-tipo-titulo: none !important;
-  background-color: #f9f9f9 !important;
-	border: 1px solid #ccc;
-	border-radius:20px;
-	margin-bottom:20px;
-	color:#ed520d;
-	font-size:22px;
-	font-weight:600;
-}
-.wrap-votos .votos-contra .tipo-titulo img {
-	display:none;
-}
+        section.votos-contra .parlamentar .imagem img {
+            max-width:120px;
+            max-height:120px;
+            width: auto;
+            height: auto;
+            border:4px solid #ed520d;
+            text-align:center;
+            padding: 3px;
+        }
 
-section.votos-contra .parlamentar .imagem img {
-	max-width:120px;
-  max-height:120px;
-	width: auto;
-  height: auto;
-	border:4px solid #ed520d;
-	text-align:center;
-	padding: 3px;
-}
+        @media (min-width: 1024px) {
+        .wrap-votos {
+            --grid-items: repeat(6, 1fr) !important;
+        }
+        }
 
-@media (min-width: 1024px) {
-  .wrap-votos {
-    --grid-items: repeat(6, 1fr) !important;
-  }
-}
+    .wrap-votos .parlamentares .parlamentar {
+        background-color: #fff !important;
+        border: 10px solid white;
+        justify-content: inherit !important;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        width: 190px;
+    }
 
-.wrap-votos .parlamentares .parlamentar {
-  background-color: #fff !important;
-  border: 10px solid white;
-  justify-content: inherit !important;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-  width: 190px;
-}
+    .wrap-votos .parlamentar {
+        padding-bottom: 0px !important;
+    }
 
-.wrap-votos .parlamentar {
-  padding-bottom: 0px !important;
-}
+    .wrap-votos .parlamentar .imagem {
+        padding-top: 0px !important;
+        background-color: #fff !important;
+        display: flex;
+    }
+    .wrap-votos .parlamentar .imagem img {
+        max-width:120px;
+        max-height:120px;
+        width: auto;
+        height: auto;
+        border:4px solid #00a650;
+        text-align:center;
+        padding: 3px;
+    }
+    .wrap-votos .parlamentar .titulo {
+        font-size: 15px !important;
+        text-transform: uppercase;
+        text-align: center;
+        padding:0px !important;
+    }
+    .wrap-votos .parlamentar .sigla {
+        font-size: 11px !important;
+        font-weight:400;
+        text-align: center;
+        padding:0px !important;
+    }
+    .wrap-votos .parlamentar .social-midia {
+        margin: 0px !important;
+        padding: 0 45px !important;
+    }
+    .wrap-votos .parlamentar .social-midia a {
+        background-color: var(--color-icon);
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .wrap-votos .parlamentar .social-midia a i, .wrap-votos .parlamentar .social-midia a svg {
+        width: 10px !important;
+        font-size: 10px !important;
+    }
 
-.wrap-votos .parlamentar .imagem {
-  padding-top: 0px !important;
-  background-color: #fff !important;
-  display: flex;
-}
-.wrap-votos .parlamentar .imagem img {
-	max-width:120px;
-  max-height:120px;
-	width: auto;
-  height: auto;
-	border:4px solid #00a650;
-	text-align:center;
-	padding: 3px;
-}
-.wrap-votos .parlamentar .titulo {
-  font-size: 15px !important;
-	text-transform: uppercase;
-	text-align: center;
-	padding:0px !important;
-}
-.wrap-votos .parlamentar .sigla {
-  font-size: 11px !important;
-	font-weight:400;
-	text-align: center;
-	padding:0px !important;
-}
-.wrap-votos .parlamentar .social-midia {
-  margin: 0px !important;
-  padding: 0 45px !important;
-}
-.wrap-votos .parlamentar .social-midia a {
-  background-color: var(--color-icon);
-  width: 20px !important;
-  height: 20px !important;
-}
-.wrap-votos .parlamentar .social-midia a i, .wrap-votos .parlamentar .social-midia a svg {
-  width: 10px !important;
-  font-size: 10px !important;
-}
+    section.votos .votos-container {
+        padding-bottom: 0px !important;
+    }
 
-section.votos .votos-container {
-  padding-bottom: 0px !important;
-}
+    .wrap-votos .tipo-titulo span:first-child {
+        margin-right: 0px !important;
+        padding-right: 0px !important;
+    }
 
-.wrap-votos .tipo-titulo span:first-child {
-  margin-right: 0px !important;
-  padding-right: 0px !important;
-}
+    .wrap-votos .modal .modal-inner [data-toggle-modal] {
+        position: absolute;
+        right: 25px !important;
+        top: 15px !important;
+        font-size: 30px !important;
+        font-weight: bold;
+    }
 
-.wrap-votos .modal .modal-inner [data-toggle-modal] {
-  position: absolute;
-  right: 25px !important;
-  top: 15px !important;
-  font-size: 30px !important;
-  font-weight: bold;
-}
+    .wrap-votos .modal .modal-inner {
+        border-radius:10px !important;
+    }
 
-.wrap-votos .modal .modal-inner {
-	border-radius:10px !important;
-}
+    .wrap-votos .modal .modal-inner div {
+        border-radius:10px !important;
+        border:1px solid #f1f1f1;
+        background:#f9f9f9;
+        padding:10px;
+        margin-bottom:5px;
+        width:100%;
+        text-align: center;
+    }
 
-.wrap-votos .modal .modal-inner div {
-	border-radius:10px !important;
-	border:1px solid #f1f1f1;
-	background:#f9f9f9;
-	padding:10px;
-	margin-bottom:5px;
-	width:100%;
-	text-align: center;
-}
+    .wrap-votos .modal .modal-inner div a {
+        text-decoration:none;
+    }
 
-.wrap-votos .modal .modal-inner div a {
-	text-decoration:none;
-}
-
-@media (max-width: 1024px) {
-  .elementor-710 .elementor-element.elementor-element-cffbacd {
-    padding: 30px 10px 30px 10px;
-  }
-	section.placar {
-		padding: 0 20px;
-	}
-	section.votos {
-		padding: 0 20px;
-	}
-	.wrap-votos {
-    --grid-items: repeat(2, 1fr) !important;
-  }
-	.wrap-votos .parlamentares .parlamentar {
-		width:178px;
-	}
-	.wrap-votos .parlamentar .social-midia {
-  padding: 0 37px !important;
-}
-	.wrap-votos .modal .modal-inner {
-		margin:20px;
-	}
-}
-
-
-		</style>
+    @media (max-width: 1024px) {
+        .elementor-710 .elementor-element.elementor-element-cffbacd {
+            padding: 30px 10px 30px 10px;
+        }
+        section.placar {
+            padding: 0 20px;
+        }
+        section.votos {
+            padding: 0 20px;
+        }
+        .wrap-votos {
+            --grid-items: repeat(2, 1fr) !important;
+        }
+        .wrap-votos .parlamentares .parlamentar {
+            width:178px;
+        }
+        .wrap-votos .parlamentar .social-midia {
+            padding: 0 37px !important;
+        }
+        .wrap-votos .modal .modal-inner {
+            margin:20px;
+        }
+    }
+</style>
 		</head>
 <body class="home page-template-default page page-id-807 ehf-template-hello-elementor ehf-stylesheet-hello-elementor elementor-default elementor-kit-14 elementor-page elementor-page-807 e--ua-blink e--ua-edge e--ua-webkit" data-elementor-device-mode="desktop"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
 <script>__wm.rw(0);</script>
@@ -653,28 +650,7 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
         </a>
             </div>
 </div>
-                        <div class="parlamentar">
-    <div class="imagem">
-                        <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/72a917e5779796432c027ffee7a9d146.jpg" width="99" height="120" alt="Avatar de Beto Martins">
-            </div>    
-    <div class="titulo">Beto Martins</div>
-            <div class="titulo" style="margin: 0; font-weight: 700; font-size: 12px !important; text-transform: none !important;">Reeleição: 2026</div>
-        <div class="sigla">Partido Liberal - SC</div>
-    <div class="social-midia">
-                        <a href="https://web.archive.org/web/20240930204343/email:sen.betomartins@senado.leg.br" style="text-decoration: none;">
-            <i aria-hidden="true" class="icon icon-email"></i>
-        </a>
-        
-                <a href="https://web.archive.org/web/20240930204343/https://www.instagram.com/senadorbetomartins?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;">
-            <i aria-hidden="true" class="icon icon-instagram-1"></i>
-        </a>
-                        <a href="tel:6133032200" style="text-decoration: none;">
-            <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-square-alt" viewBox="0 0 448 512" xmlns="https://www.w3.org/2000/svg">
-                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
-            </svg>
-        </a>
-            </div>
-</div>
+
                         <div class="parlamentar">
     <div class="imagem">
                         <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/98eb25dcf36f0b7317f4432fc84fb2ec.jpg" width="99" height="120" alt="Avatar de Carlos Portinho">
@@ -1765,6 +1741,31 @@ __wm.bt(750,27,25,2,"web","https://votossenadores.com.br/","20240930204343",1996
         </a>
             </div>
 </div>
+
+                        <div class="parlamentar">
+    <div class="imagem">
+                        <img loading="lazy" decoding="async" src="https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6010.jpg" width="99" height="120" alt="Avatar de Beto Martins">
+            </div>    
+    <div class="titulo">Ivete da Silveira</div>
+            <div class="titulo" style="margin: 0; font-weight: 700; font-size: 12px !important; text-transform: none !important;">Reeleição: 2026</div>
+        <div class="sigla">Movimento Democrático Brasileiro - SC</div>
+    <div class="social-midia">
+                        <a href="https://web.archive.org/web/20240930204343/email:sen.betomartins@senado.leg.br" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-email"></i>
+        </a>
+        
+                <a href="https://web.archive.org/web/20240930204343/https://www.instagram.com/senadorbetomartins?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;">
+            <i aria-hidden="true" class="icon icon-instagram-1"></i>
+        </a>
+                        <a href="tel:6133032200" style="text-decoration: none;">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-square-alt" viewBox="0 0 448 512" xmlns="https://www.w3.org/2000/svg">
+                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
+            </svg>
+        </a>
+            </div>
+</div>
+
+
                         <div class="parlamentar">
     <div class="imagem">
                         <img loading="lazy" decoding="async" src="https://web.archive.org/web/20240930204343im_/http://votossenadores.com.br/wp-content/uploads/avatar_cache/370e5861193fed0fc86495577167b131.jpg" width="99" height="120" alt="Avatar de Jader Barbalho">
