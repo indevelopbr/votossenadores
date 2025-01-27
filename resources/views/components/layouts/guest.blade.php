@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="profile" href="https://gmpg.org/xfn/11">
         <link rel="preload" href="{{ asset('assets/images/foto-moraes.png') }}" as="image">
-        <title>{{ config('app.name') . ' -' . $title }}</title>
+        <title>{{ config('app.name') . ' - ' . $title }}</title>
         <meta name="robots" content="max-image-preview:large">
         <link rel="stylesheet" href="{{ asset('assets/css/header-footer-elementor.css?ver=1.6.42') }}" media="all">
         <link rel="stylesheet" href="{{ asset('assets/css/frontend.min.css?ver=3.24.4') }}" media="all">
