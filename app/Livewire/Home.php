@@ -9,12 +9,12 @@ use Livewire\Component;
 
 class Home extends Component
 {
+    public $uri;
     public $selectedUf;
 
-    public function mount(Request $request)
+    public function mount(String $uri = null)
     {
-        // Obtém o valor do parâmetro 'uf' da requisição
-        $this->selectedUf = $request->input('uf');
+        $this->uri = $uri;
     }
 
     public function selectedUfId(string $uf) {
@@ -23,10 +23,22 @@ class Home extends Component
 
     public function render()
     {
+        $cacheName = $this->uri ? $this->uri : 'voting';
+
         // Obtém a votação do cache ou busca no banco
-        $voting = Cache::remember('voting', 60, function () {
-            return Voting::with(['votes.senator.party'])->first();
+        $voting = Cache::remember($cacheName, 60, function () {
+            return Voting::when($this->uri, function ($query) {
+                $query->where('voting_uri', $this->uri);
+            })
+            ->when(!$this->uri, function ($query) {
+                $query->where('main_vote', 1);
+            })
+            ->with(['votes.senator.party'])->first();
         });
+
+        if (is_null($voting)) {
+            return abort(404);
+        }
 
         // Verifica se há uma votação disponível
         if (!$voting) {
@@ -56,12 +68,13 @@ class Home extends Component
         $against = $filteredVotes->where('vote', 'N')->sortBy(fn($vote) => $vote->senator->name ?? '');
 
         return view('livewire.home', [
+            'title'      => $voting->name,
             'voting'     => $voting,
             'inFavor'    => $inFavor,
             'indefinite' => $indefinite,
             'against'    => $against,
         ])
         ->layout('components.layouts.guest')
-        ->title(' - ' . $voting->name);
+        ->title($voting->name);
     }
 }

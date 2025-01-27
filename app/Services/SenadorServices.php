@@ -285,7 +285,7 @@ class SenadorServices
 
     public function initUpdate()
     {
-        //$this->updatePartidos();
+        $this->updatePartidos();
         $this->updateSenadoresAtual();
 
         //foreach ($senadores as $senador) {

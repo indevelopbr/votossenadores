@@ -44,9 +44,11 @@ class ListVote extends Component
                 $vote->save();
             }
 
-            Cache::forget('voting'); // remove a chave antiga
+            $cacheName = Voting::find($vote->votin_id)->voting_uri ?? 'voting';
+
+            Cache::forget($cacheName); // remove a chave antiga
             $voting = Voting::with(['votes.senator.party'])->first();
-            Cache::put('voting', $voting, 60); // grava a nova versão por 60s
+            Cache::put($cacheName, $voting, 60); // grava a nova versão por 60s
         }
     }
 

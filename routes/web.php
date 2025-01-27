@@ -17,7 +17,6 @@ Route::middleware(['auth', 'verified'])->prefix('cms')->group(function () {
     Route::get('/senadores/{senator}/editar', CreateOrEditSenator::class)->name('senadores.editar');
 });
 
-Route::get('/', Home::class)->name('home');
 Route::get('/partidos', Partidos::class)->name('partidos');
 
 Route::view('dashboard', 'dashboard')
@@ -29,3 +28,6 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 require __DIR__.'/auth.php';
+
+Route::get('/', Home::class)->name('home');
+Route::get('/{uri}', Home::class)->name('home');
