@@ -9,12 +9,12 @@
                                 <h2 class="elementor-heading-title elementor-size-default">
                                     @if ($voting->id === 1)
                                     <a href="https://votossenadores.com.br/lula" target="_blank" style="color: white">
-                                        {{ __('Conheça a posição do seu Deputado no Impeachment de Lula') }}
+                                        {{ __('Conheça a posição do seu Senador no Impeachment de Lula') }}
                                     </a>
                                     @endif
                                     @if ($voting->id === 2)
                                     <a href="https://votossenadores.com.br/moraes" target="_blank" style="color: white">
-                                        {{ __('Conheça a posição do seu Deputado no Impeachment de Alexandre de Moraes') }}
+                                        {{ __('Conheça a posição do seu Senador no Impeachment de Alexandre de Moraes') }}
                                     </a>
                                     @endif
                                 </h2>
@@ -28,14 +28,14 @@
                             <div class="elementor-widget-container">
                                 <div class="elementor-button-wrapper">
                                     @if ($voting->id === 1)
-                                    <a class="elementor-button elementor-button-link elementor-size-sm" href="https://votosdeputados.com.br/lula" target="_blank">
+                                    <a class="elementor-button elementor-button-link elementor-size-sm" href="https://votossenadores.com.br/lula" target="_blank">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">ACESSAR</span>
-                                        </span>
+                                        </span> 
                                     </a>
                                     @endif
                                     @if ($voting->id === 2)
-                                    <a class="elementor-button elementor-button-link elementor-size-sm" href="https://votosdeputados.com.br/moraes" target="_blank">
+                                    <a class="elementor-button elementor-button-link elementor-size-sm" href="https://votossenadores.com.br/moraes" target="_blank">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">ACESSAR</span>
                                         </span>
@@ -68,7 +68,7 @@
                         <div class="elementor-element elementor-element-44ece10 elementor-widget elementor-widget-heading" data-id="44ece10" data-element_type="widget" data-widget_type="heading.default">
                             <div class="elementor-widget-container">
                                 <h2 class="elementor-heading-title elementor-size-default">
-                                    {{ __('Conheça a posição do seu Deputado no:') }}
+                                    {{ __('Conheça a posição do seu Senador no:') }}
                                 </h2>
                             </div>
                         </div>
@@ -791,7 +791,7 @@
         <div class="e-con-inner">
             <div class="elementor-element elementor-element-b04cafc elementor-widget elementor-widget-heading" data-id="b04cafc" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default">Conheça a posição do seu deputado federal no Impeachment de Alexandre de Moraes</h2>
+                    <h2 class="elementor-heading-title elementor-size-default">Conheça a posição do seu senador federal no Impeachment de Alexandre de Moraes</h2>
                 </div>
             </div>
             <div class="elementor-element elementor-element-1239397 elementor-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="1239397" data-element_type="widget" data-widget_type="button.default">
@@ -811,13 +811,13 @@
     <div class="e-con-inner"  style="align-items: center;">
         <div class="elementor-element elementor-element-761b918 elementor-widget elementor-widget-heading" data-id="761b918" data-element_type="widget" data-widget_type="heading.default">
             <div class="elementor-widget-container">
-                <h2 class="elementor-heading-title elementor-size-default">Sobre o Votos Deputados</h2>
+                <h2 class="elementor-heading-title elementor-size-default">Sobre o Votos Senadores</h2>
             </div>
         </div>
         <div class="elementor-element elementor-element-27ed8ea elementor-widget elementor-widget-heading" data-id="27ed8ea" data-element_type="widget" data-widget_type="heading.default">
             <div class="elementor-widget-container">
                 <h2 class="elementor-heading-title elementor-size-default">
-                    Este site tem como objetivo apresentar as intenções de voto ou apoio dos deputados em exercício no Brasil aos projetos e pautas em discussão. Confira se eles estão honrando o voto que você, eleitor, depositou neles.
+                    Este site tem como objetivo apresentar as intenções de voto ou apoio dos Senadores em exercício no Brasil aos projetos e pautas em discussão. Confira se eles estão honrando o voto que você, eleitor, depositou neles.
                 </h2>
             </div>
         </div>
